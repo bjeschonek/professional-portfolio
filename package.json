@@ -1,0 +1,24 @@
+{
+  "name": "professional-portfolio",
+  "version": "0.0.1",
+  "description": "My personal portfolio website showcasing my work.",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjeschonek/professional-portfolio.git"
+  },
+  "keywords": [],
+  "author": "Brad Jeschonek",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bjeschonek/professional-portfolio/issues"
+  },
+  "homepage": "https://github.com/bjeschonek/professional-portfolio#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

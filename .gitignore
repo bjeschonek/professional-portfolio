@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+packages/
+/dist
+*.log
+*.tmp
+*.temp
+.cache
+.env
+.vscode/
