@@ -9,3 +9,6 @@ npm-debug.*
 .cache
 .env
 .vscode/
+.agents/
+agents/
+references/
