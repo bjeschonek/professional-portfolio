@@ -12,5 +12,4 @@ npm-debug.*
 .agents/
 agents/
 references/
-AGENTS.md
-SPEC.md
+docs/
