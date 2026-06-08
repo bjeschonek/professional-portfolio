@@ -1,15 +1,41 @@
+# OS Files
 .DS_Store
+Thumbs.db
+
+# Dependencies
 node_modules/
-packages/
-dist
+.bun/
+.turbo/
+.cache/
+
+# Build Outputs
+dist/
+_site/
+.eleventy.js
 *.log
 *.tmp
 *.temp
-npm-debug.*
-.cache
+
+# Environment & Secrets
 .env
+.env.*
+.npm
+.yarn.*
+.yarnrc.yml
+
+# IDE & Editor
 .vscode/
+.idea/
+*.swp
+*.swo
+
+# Agent specific (Keep only if you want to hide agent logic)
 .agents/
 agents/
-references/
 docs/
+references/
+
+# System files
+.cache/
+*.tmp
+*.temp

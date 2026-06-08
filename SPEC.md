@@ -16,25 +16,30 @@ Build a high-performance, minimalist professional portfolio for a full-stack sof
 ## 3. Project Structure
 ```text
 .
-├── .github/workflows/      # GitHub Actions for automated deployment
-├── assets/                  # Images, icons, and global assets
-├── blog/                    # Markdown files for blog posts
+├── .agents/                      # Agent skills and workflows
+├── agents/                       # Agent personas
+├── docs/                         # Documentation
+├── references/                   # Reference materials
+├── .github/workflows/           # GitHub Actions for automated deployment
+├── assets/                       # Images, icons, and global assets
+├── blog/                        # Markdown files for blog posts
 │   ├── post-1.md
 │   └── post-2.md
-├── public/                 # Static assets (favicon, etc.)
+├── public/                       # Static assets (favicon, etc.)
 ├── src/
-│   ├── components/         # Reusable UI components (Tailwind-based)
-│   ├── layouts/            # Page wrappers (Home, Blog, Resume)
-│   ├── pages/              # Page-specific logic/content
-│   ├── styles/             # Global CSS & Tailwind directives
-│   └── types/              # TypeScript interfaces and types
-├── _data/                   # JSON files for project metadata, tags, etc.
-├── _includes/              # 11ty partials (header, footer, cards)
-├── SPEC.md                 # This document
+│   ├── components/               # Reusable UI components (Tailwind-based)
+│   ├── layouts/                  # Page wrappers (Home, Blog, Resume)
+│   ├── pages/                    # Page-specific logic/content
+│   ├── styles/                   # Global CSS & Tailwind directives
+│   └── types/                    # TypeScript interfaces and types
+├── _data/                        # JSON files for project metadata, tags, etc.
+├── _includes/                    # 11ty partials (header, footer, cards)
+├── .gitignore
+├── AGENTS.md
+├── README.md
+├── SPEC.md
 ├── package.json
 ├── tsconfig.json
-├── tailwind.config.js
-└── .gitignore
 ```
 
 ## 4. Code Style & Paradigm

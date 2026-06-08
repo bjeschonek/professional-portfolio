@@ -1,0 +1,22 @@
+{
+  "name": "professional-portfolio",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/bun": "latest",
+    "@types/node": "^25.9.2",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.0"
+  },
+  "scripts": {
+    "dev": "bun eleventy --host --port 8080",
+    "build": "bun eleventy",
+    "lint": "bun x tsc --noEmit"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
