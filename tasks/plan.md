@@ -12,33 +12,35 @@ Building a high-performance, minimalist professional portfolio for a full-stack 
 
 ## Task List
 
-### Phase 1: Foundation
-- [ ] Task 1: Initialize project structure and dependencies (bun, 11ty, Tailwind).
-- [ ] Task 2: Configure TypeScript, Prettier, and Tailwind CSS.
-- [ ] Task 3: Create global layout components (Header, Footer) and base styles.
+### Phase 1: Design & Foundation
+- [ ] Task 1: Design UI mockups and define brand theme (Tailwind design tokens).
+- [ ] Task 2: Initialize project structure and dependencies (bun, 11ty, Tailwind).
+- [ ] Task 3: Configure TypeScript, Prettier, and PostCSS/Tailwind CSS.
+- [ ] Task 4: Create global layouts (base, header, footer) and CSS styles.
 
 ### Checkpoint: Foundation
-- [ ] Tests pass, builds clean
-- [ ] Tailwind is correctly generating styles
-- [ ] 11ty project structure is verified
+- [ ] UI mockups and design token spec are approved
+- [ ] 11ty project structure is verified and builds clean
+- [ ] Tailwind CSS compiles successfully with brand tokens
+- [ ] Basic base, header, and footer templates render correctly
 
 ### Phase 2: Core Content & Data
-- [ ] Task 4: Define project and blog data schemas in `_data/`.
-- [ ] Task 5: Implement Home page with Biography and Projects grid.
-- [ ] Task 6: Implement Resume page with high-fidelity layout.
-- [ ] Task 7: Implement Blog listing page with category filtering.
-- [ ] Task 8: Implement individual Blog post pages from Markdown.
+- [ ] Task 5: Define project and blog data schemas in `_data/`.
+- [ ] Task 6: Implement Home page template with Biography and Projects grid.
+- [ ] Task 7: Implement Resume page template with high-fidelity layout.
+- [ ] Task 8: Implement Blog listing page template with category filtering.
+- [ ] Task 9: Implement individual Blog post template rendering from Markdown.
 
 ### Checkpoint: Core Features
-- [ ] End-to-end flow works
-- [ ] Blog posts render correctly with metadata
-- [ ] Projects grid displays tech stack badges
+- [ ] End-to-end site routing works
+- [ ] Blog posts render correctly with metadata and styles
+- [ ] Projects grid displays tech stack badges matching the design spec
 
 ### Phase 3: Interactive & Polish
-- [ ] Task 9: Implement client-side search for blog posts.
-- [ ] Task 10: Implement Contact section and social links.
-- [ ] Task 11: Add simple, performant analytics.
-- [ ] Task 12: Final polish (mobile responsiveness, accessibility check).
+- [ ] Task 10: Implement client-side search (TypeScript) for blog posts.
+- [ ] Task 11: Implement Contact section and social links.
+- [ ] Task 12: Add simple, performant analytics (lightweight TS/JS script).
+- [ ] Task 13: Final polish (mobile responsiveness, accessibility audit, performance check).
 
 ### Checkpoint: Complete
 - [ ] All acceptance criteria met
@@ -47,9 +49,10 @@ Building a high-performance, minimalist professional portfolio for a full-stack 
 ## Risks and Mitigations
 | Risk | Impact | Mitigation |
 |------|--------|------------|
-| Large JS bundle for search | Med | Use a lightweight native JS filter or a tiny library. |
-| Accessibility regressions | Med | Use semantic HTML and test with a linter/automated tool. |
+| Large JS bundle for search | Med | Use lightweight native JS filter; avoid heavy frameworks. |
+| Accessibility regressions | Med | Use semantic HTML and verify with automated checks. |
 | Image load performance | Low | Use modern formats (WebP/AVIF) and lazy loading. |
+| Design mismatches | Med | Ensure visual design spec is fully approved before writing templates. |
 
 ## Open Questions
 - Which specific analytics provider should be used? (Pending approval)

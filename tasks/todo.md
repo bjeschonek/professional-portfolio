@@ -1,37 +1,47 @@
 # Task List: Professional Engineering Portfolio
 
-## Phase 1: Foundation
+## Phase 1: Design & Foundation
 
-### Task 1: Initialize project structure and dependencies (bun, 11ty, Tailwind)
-**Description:** Set up the project with Bun, 11ty, and Tailwind CSS.
+### Task 1: Design UI mockups and define brand theme (Tailwind design tokens)
+**Description:** Generate high-fidelity visual mockups for the Home page, Blog listing, and Resume layouts. Select a premium color scheme, typography scale, and layout grid. Extract Tailwind configuration values (colors, fonts, sizes).
+**Acceptance criteria:**
+- [ ] Visual mockups for desktop and mobile home/blog pages are generated and saved as artifacts in the workspace.
+- [ ] Brand theme configuration (colors, typography, spacing) is documented.
+**Verification:**
+- [ ] User reviews and approves the mockups and design token spec.
+**Dependencies:** None
+**Files likely touched:** None (creates design artifacts in `artifacts/`)
+**Estimated scope:** Small: 1-2 files
+
+### Task 2: Initialize project structure and dependencies (bun, 11ty, Tailwind)
+**Description:** Set up the project with Bun, Eleventy (11ty), and Tailwind CSS v4.
 **Acceptance criteria:**
 - [ ] `bun install` succeeds
-- [ ] `bun run dev` starts a local server
+- [ ] `bun run dev` starts a local Eleventy server
 - [ ] `bun run build` produces a `_site` directory
-- [ ] Tailwind CSS is initialized and configured
+- [ ] PostCSS and Tailwind CSS are initialized and configured for the project
 **Verification:**
 - [ ] Build succeeds: `bun run build`
-- [ ] Manual check: Verify that `package.json` contains necessary dependencies and scripts.
-**Dependencies:** None
+- [ ] Manual check: Verify `package.json` contains correct scripts and dependencies.
+**Dependencies:** Task 1
 **Files likely touched:**
 - `package.json`
 - `bun.lock`
-- `tailwind.config.js`
 - `postcss.config.js`
-- `.eleventy.js`
+- `eleventy.config.js` (or `.eleventy.js`)
 **Estimated scope:** Medium: 3-5 files
 
-### Task 2: Configure TypeScript, Prettier, and Tailwind CSS
-**Description:** Set up strict TypeScript configuration, Prettier formatting, and Tailwind directives.
+### Task 3: Configure TypeScript, Prettier, and PostCSS/Tailwind CSS
+**Description:** Configure strict TypeScript compiler options, Prettier formatting, and Tailwind directives in global CSS.
 **Acceptance criteria:**
-- [ ] `tsconfig.json` has `strict: true`
-- [ ] Prettier is configured for standard formatting
-- [ ] Tailwind directives are included in global CSS
-- [ ] Linting runs without errors
+- [ ] `tsconfig.json` has `strict: true` and appropriate types configured
+- [ ] Prettier is configured for clean, standard formatting
+- [ ] Tailwind directives are imported in the global CSS file
+- [ ] `bun run lint` runs without errors
 **Verification:**
-- [ ] Linting passes
-- [ ] Prettier formats the codebase
-**Dependencies:** Task 1
+- [ ] `bun run lint` passes
+- [ ] Prettier formats the codebase successfully
+**Dependencies:** Task 2
 **Files likely touched:**
 - `tsconfig.json`
 - `.prettierrc`
@@ -39,36 +49,41 @@
 - `package.json`
 **Estimated scope:** Small: 1-2 files
 
-### Task 3: Create global layout components (Header, Footer) and base styles
-**Description:** Create reusable layout components and define the base theme.
+### Task 4: Create global layouts (base, header, footer) and CSS styles
+**Description:** Create reusable Nunjucks base layout and header/footer partials. Build the core styling sheet with custom Tailwind CSS properties.
 **Acceptance criteria:**
-- [ ] Header includes navigation links
-- [ ] Footer includes social links and copyright
-- [ ] Base CSS handles typography and colors
+- [ ] Base layout includes meta tags, favicon link, and references the generated CSS stylesheet
+- [ ] Header Nunjucks partial contains responsive navigation links
+- [ ] Footer Nunjucks partial contains professional and social links
+- [ ] Global stylesheet includes typography scales, gradients, and custom animations matching the design spec
 **Verification:**
-- [ ] Manual check: Verify header and footer render on all pages.
-**Dependencies:** Task 2
+- [ ] Manual check: Build and verify header and footer render cleanly.
+**Dependencies:** Task 3
 **Files likely touched:**
-- `src/components/Header.tsx`
-- `src/components/Footer.tsx`
+- `_includes/layouts/base.njk`
+- `_includes/components/header.njk`
+- `_includes/components/footer.njk`
 - `src/styles/main.css`
 **Estimated scope:** Medium: 3-5 files
 
 ## Checkpoint: Foundation
-- [ ] Tests pass, builds clean
-- [ ] Tailwind is correctly generating styles
-- [ ] 11ty project structure is verified
+- [ ] UI mockups and design token spec are approved
+- [ ] 11ty project structure is verified and builds clean
+- [ ] Tailwind CSS compiles successfully with brand tokens
+- [ ] Basic base, header, and footer templates render correctly
+
+---
 
 ## Phase 2: Core Content & Data
 
-### Task 4: Define project and blog data schemas in `_data/`
-**Description:** Create JSON files for project metadata and blog post categories.
+### Task 5: Define project and blog data schemas in `_data/`
+**Description:** Create static JSON data files for projects and blog post categories, along with TypeScript definitions for strict type checking.
 **Acceptance criteria:**
-- [ ] `_data/projects.json` exists with sample data
-- [ ] `_data/categories.json` exists
-- [ ] TypeScript interfaces for these schemas are defined
+- [ ] `_data/projects.json` exists with real-world sample projects, badges, links, and results
+- [ ] `_data/categories.json` defines categories/tags for blog posts
+- [ ] TypeScript interfaces in `src/types/` define validation contracts for these schemas
 **Verification:**
-- [ ] Manual check: Verify JSON files are valid and follow the defined schema.
+- [ ] Verification script or type check validation succeeds.
 **Dependencies:** None
 **Files likely touched:**
 - `_data/projects.json`
@@ -76,113 +91,123 @@
 - `src/types/data.ts`
 **Estimated scope:** Small: 1-2 files
 
-### Task 5: Implement Home page with Biography and Projects grid
-**Description:** Build the main landing page featuring a bio and project showcase.
+### Task 6: Implement Home page template with Biography and Projects grid
+**Description:** Build the main landing page containing a compelling biography and the responsive projects showcase grid, styled matching the UI prototype.
 **Acceptance criteria:**
-- [ ] Biography is displayed clearly
-- [ ] Projects are rendered in a grid
-- [ ] Each project card has tech stack badges
+- [ ] Biography section renders clearly with optimized typography
+- [ ] Projects are displayed in a responsive grid layout
+- [ ] Each project card displays descriptive content, results, and tech stack badges
 **Verification:**
-- [ ] Manual check: Verify grid layout and badges on mobile and desktop.
-**Dependencies:** Task 3, Task 4
+- [ ] Manual check: Verify layout responsiveness and badges on mobile and desktop viewports.
+**Dependencies:** Task 4, Task 5
 **Files likely touched:**
-- `src/pages/Home.tsx`
-- `src/components/ProjectGrid.tsx`
-- `src/components/ProjectCard.tsx`
+- `src/pages/index.njk`
+- `_includes/components/project-card.njk`
 **Estimated scope:** Medium: 3-5 files
 
-### Task 6: Implement Resume page with high-fidelity layout
-**Description:** Create a dedicated resume page with a professional layout.
+### Task 7: Implement Resume page template with high-fidelity layout
+**Description:** Create a high-fidelity, professional resume page styled using the visual prototype grid.
 **Acceptance criteria:**
-- [ ] Resume content is structured and readable
-- [ ] Page is mobile responsive
+- [ ] Resume details (Experience, Skills, Education) are cleanly structured and readable
+- [ ] Page is fully mobile-responsive and print-friendly
+- [ ] A download link for a PDF resume is present
 **Verification:**
-- [ ] Manual check: Verify layout on multiple screen sizes.
-**Dependencies:** Task 3
+- [ ] Manual check: Verify responsive columns on desktop vs mobile. Inspect print preview.
+**Dependencies:** Task 4
 **Files likely touched:**
-- `src/pages/Resume.tsx`
+- `src/pages/resume.njk`
+**Estimated scope:** Small: 1-2 files
+
+### Task 8: Implement Blog listing page template with category filtering
+**Description:** Create the blog list template that lists posts chronologically and displays clickable categories.
+**Acceptance criteria:**
+- [ ] Blog posts are listed with title, publish date, read time, and category tags
+- [ ] Clickable category badges filter posts dynamically or route correctly
+**Verification:**
+- [ ] Manual check: Verify template parses data feed correctly and lists posts.
+**Dependencies:** Task 4, Task 5
+**Files likely touched:**
+- `src/pages/blog.njk`
+- `_includes/components/blog-card.njk`
 **Estimated scope:** Medium: 3-5 files
 
-### Task 7: Implement Blog listing page with category filtering
-**Description:** Build the blog index page with category navigation.
+### Task 9: Implement individual Blog post template rendering from Markdown
+**Description:** Configure Markdown parser (markdown-it) and build the layout template for individual blog posts.
 **Acceptance criteria:**
-- [ ] Blog posts are listed chronologically
-- [ ] Categories are clickable and filter the list
+- [ ] Markdown files inside `blog/` are successfully compiled by Eleventy
+- [ ] Blog layout displays frontmatter (date, title, read time, description) and body text
+- [ ] Code blocks in posts render with syntax highlighting
 **Verification:**
-- [ ] Manual check: Verify filtering works correctly.
-**Dependencies:** Task 3, Task 4
+- [ ] Manual check: Navigate to `/blog/post-1/` and verify layout, images, and code snippets.
+**Dependencies:** Task 4, Task 5
 **Files likely touched:**
-- `src/pages/Blog.tsx`
-- `src/components/BlogFilter.tsx`
-**Estimated scope:** Medium: 3-5 files
-
-### Task 8: Implement individual Blog post pages from Markdown
-**Description:** Create the template for rendering individual blog posts.
-**Acceptance criteria:**
-- [ ] Markdown files in `blog/` render correctly
-- [ ] Frontmatter (date, title, etc.) is correctly parsed
-**Verification:**
-- [ ] Manual check: Navigate to a sample blog post.
-**Dependencies:** Task 3, Task 4
-**Files likely touched:**
-- `src/layouts/PostLayout.tsx`
+- `_includes/layouts/post.njk`
 - `blog/post-1.md`
+- `eleventy.config.js`
 **Estimated scope:** Medium: 3-5 files
 
 ## Checkpoint: Core Features
-- [ ] Blog posts render correctly with metadata
-- [ ] Projects grid displays tech stack badges
+- [ ] End-to-end site routing works
+- [ ] Blog posts render correctly with metadata and styles
+- [ ] Projects grid displays tech stack badges matching the design spec
+
+---
 
 ## Phase 3: Interactive & Polish
 
-### Task 9: Implement client-side search for blog posts
-**Description:** Add a search bar to filter blog posts instantly.
+### Task 10: Implement client-side search (TypeScript) for blog posts
+**Description:** Implement a lightweight, client-side search component in TypeScript that filters blog posts instantly based on title, content, or tags.
 **Acceptance criteria:**
-- [ ] Search results update as the user types
-- [ ] Empty states are handled
+- [ ] Input element dynamically filters list items without full page reload
+- [ ] Empty/No-results states are gracefully handled
+- [ ] Compiled JavaScript is minimal, performant, and does not block page load
 **Verification:**
-- [ ] Manual check: Test search with various keywords.
-**Dependencies:** Task 7
+- [ ] Test search performance and filtering accuracy across multiple terms.
+**Dependencies:** Task 8
 **Files likely touched:**
-- `src/components/Search.tsx`
-- `src/pages/Blog.tsx`
+- `src/scripts/search.ts`
+- `src/pages/blog.njk`
 **Estimated scope:** Medium: 3-5 files
 
-### Task 10: Implement Contact section and social links
-**Description:** Add a contact section with a mailto link and social icons.
+### Task 11: Implement Contact section and social links
+**Description:** Design and build the Contact section with a clear call to action, contact form or mailto link, and professional social link list.
 **Acceptance criteria:**
-- [ ] Mailto link functions correctly
-- [ ] Social icons are linked to GitHub/LinkedIn
+- [ ] Contact details are clean and visually prominent
+- [ ] Social links open in new tabs with appropriate security attributes (`rel="noopener noreferrer"`)
 **Verification:**
-- [ ] Manual check: Verify all links open in new tabs/apps.
-**Dependencies:** None
+- [ ] Manual check: Verify links function as expected on mobile and desktop.
+**Dependencies:** Task 4
 **Files likely touched:**
-- `src/components/Contact.tsx`
-- `src/components/SocialLinks.tsx`
+- `_includes/components/contact.njk`
+- `src/pages/index.njk`
 **Estimated scope:** Small: 1-2 files
 
-### Task 11: Add simple, performant analytics
-**Description:** Integrate a lightweight analytics script.
+### Task 12: Add simple, performant analytics (lightweight TS/JS script)
+**Description:** Integrate a privacy-focused, lightweight analytics tracker script without affecting performance score.
 **Acceptance criteria:**
-- [ ] Analytics script is loaded without blocking the main thread
-- [ ] Basic events (page view) are tracked
+- [ ] Analytics tracking works asynchronously and does not impact page performance scores
+- [ ] Respects user preferences (Do Not Track check)
 **Verification:**
-- [ ] Manual check: Verify events in analytics dashboard.
-**Dependencies:** None
+- [ ] Performance audit passes. Page load telemetry is checked.
+**Dependencies:** Task 4
 **Files likely touched:**
-- `src/components/Analytics.tsx`
-- `src/layouts/Layout.tsx`
+- `src/scripts/analytics.ts`
+- `_includes/layouts/base.njk`
 **Estimated scope:** Small: 1-2 files
 
-### Task 12: Final polish (mobile responsiveness, accessibility check)
-**Description:** Perform a final pass on UX and accessibility.
+### Task 13: Final polish (mobile responsiveness, accessibility audit, performance check)
+**Description:** Run final accessibility audits, optimize assets (images/fonts), check cross-browser mobile responsiveness, and run final build.
 **Acceptance criteria:**
-- [ ] All pages pass WCAG 2.1 AA check
-- [ ] No horizontal scrolling on mobile
-- [ ] Images are optimized
+- [ ] Lighthouse or PageSpeed Insights accessibility score of 100
+- [ ] Zero responsiveness layout breakages on mobile screens (down to 320px width)
+- [ ] Performance score of 95+ on all pages
 **Verification:**
-- [ ] Manual check: Audit with accessibility tool.
-**Dependencies:** All
+- [ ] Run build and verify output sizes. Check visual display using browser emulation.
+**Dependencies:** All previous tasks
 **Files likely touched:**
-- All
+- All template and CSS files
 **Estimated scope:** Large: 5+ files
+
+## Checkpoint: Complete
+- [ ] All acceptance criteria met
+- [ ] Ready for review
