@@ -32,7 +32,6 @@ _site/
 # Agent specific (Keep only if you want to hide agent logic)
 .agents/
 agents/
-docs/
 references/
 
 # System files
