@@ -2,16 +2,15 @@
 
 ## Phase 1: Design & Foundation
 
-### Task 1: Design UI mockups and define brand theme (Tailwind design tokens)
-**Description:** Generate high-fidelity visual mockups for the Home page, Blog listing, and Resume layouts. Select a premium color scheme, typography scale, and layout grid. Extract Tailwind configuration values (colors, fonts, sizes).
+### Task 1: Write UI/UX design spec and PRD for Stitch (AI design tool)
+**Description:** Create a comprehensive visual design specification and Product Requirements Document (PRD) detailing color palettes, typography scales, page layout flows, components, responsive breakpoints, and micro-interactions, to be fed into the Stitch AI design tool.
 **Acceptance criteria:**
-- [ ] Visual mockups for desktop and mobile home/blog pages are generated and saved as artifacts in the workspace.
-- [ ] Brand theme configuration (colors, typography, spacing) is documented.
+- [x] Stitch PRD/spec defining theme tokens and component layouts is generated and saved at `docs/stitch-prd.md`.
 **Verification:**
-- [ ] User reviews and approves the mockups and design token spec.
+- [ ] User reviews and approves the Stitch PRD/spec.
 **Dependencies:** None
-**Files likely touched:** None (creates design artifacts in `artifacts/`)
-**Estimated scope:** Small: 1-2 files
+**Files likely touched:** `docs/stitch-prd.md`
+**Estimated scope:** Small: 1 file
 
 ### Task 2: Initialize project structure and dependencies (bun, 11ty, Tailwind)
 **Description:** Set up the project with Bun, Eleventy (11ty), and Tailwind CSS v4.
@@ -67,7 +66,7 @@
 **Estimated scope:** Medium: 3-5 files
 
 ## Checkpoint: Foundation
-- [ ] UI mockups and design token spec are approved
+- [ ] Stitch PRD/spec is approved
 - [ ] 11ty project structure is verified and builds clean
 - [ ] Tailwind CSS compiles successfully with brand tokens
 - [ ] Basic base, header, and footer templates render correctly
@@ -92,7 +91,7 @@
 **Estimated scope:** Small: 1-2 files
 
 ### Task 6: Implement Home page template with Biography and Projects grid
-**Description:** Build the main landing page containing a compelling biography and the responsive projects showcase grid, styled matching the UI prototype.
+**Description:** Build the main landing page containing a compelling biography and the responsive projects showcase grid, styled matching the Stitch PRD/spec.
 **Acceptance criteria:**
 - [ ] Biography section renders clearly with optimized typography
 - [ ] Projects are displayed in a responsive grid layout
@@ -106,7 +105,7 @@
 **Estimated scope:** Medium: 3-5 files
 
 ### Task 7: Implement Resume page template with high-fidelity layout
-**Description:** Create a high-fidelity, professional resume page styled using the visual prototype grid.
+**Description:** Create a high-fidelity, professional resume page styled using the layout defined in the Stitch PRD/spec.
 **Acceptance criteria:**
 - [ ] Resume details (Experience, Skills, Education) are cleanly structured and readable
 - [ ] Page is fully mobile-responsive and print-friendly

@@ -1,14 +1,19 @@
-# AGENTS.md
+# AGENTS.md - Critical Knowledge for Agents Working on this Repo
 
 This file provides guidance to AI coding agents when working in this repository.
 
 This file serves as your system context, operational constraints, and project source-of-truth. Review this file before analyzing or modifying the codebase.
 
-## Golden Rule for Token Management
+## Context Window Token Limit
 
-**NEVER** allow a task to exceed 120,000 tokens. If the task is not complete by this time, prepare to handoff context to a new agent with a fresh context window.
+**STOP** working on a task if the context window exceeds 120,000 tokens. Agent accuracy degrades sharply at this point. If you are working on a task when the context window reaches this limit, handoff the task to a new agent with a new context window.
 
 ## Core Development Protocols
+
+### Expectation of Highest Quality Work
+* **Software Engineering:** Always follow software engineering best practices.
+* **DO NOT VIBE CODE:** Vibe coding is stricly forbidden.
+* **Best Practices:** Follow DRY, KISS, and SOLID paradigms. Document everything.
 
 ### Code Style & Paradigm
 * **Programming Paradigm:** Favor functional, declarative patterns over imperative loops wherever possible.
@@ -39,7 +44,7 @@ This file serves as your system context, operational constraints, and project so
 
 ### Requirements
 * Every bug fix must include a regression test.
-* Every new feature must have corresponding unit or integration tests achieving at least [100]% coverage.
+* Every new feature must have corresponding unit or integration tests achieving at least 100% coverage.
 * Ensure all edge cases (e.g., empty states, math boundary limits, null/undefined handling) throw explicit, readable errors.
 
 ## Memory & Context Optimization
@@ -92,7 +97,7 @@ This ensures OpenCode behaves similarly to Claude Code with full workflow enforc
 
 ## Orchestration: Personas, Skills, and Commands
 
-This repo has three composable layers. They have different jobs and should not be confused:
+This repo has two composable layers. They have different jobs and should not be confused:
 
 - **Skills** (`.agents/skills/<name>/SKILL.md`) — workflows with steps and exit criteria. The *how*. Mandatory hops when an intent matches.
 - **Personas** (`agents/<role>.md`) — roles with a perspective and an output format. The *who*.
