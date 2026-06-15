@@ -44,7 +44,8 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  code, pre {
+  code,
+  pre {
     font-family: var(--font-mono);
   }
 
@@ -97,12 +98,12 @@
       margin: 0 !important;
       max-width: 100% !important;
     }
-    
+
     a {
       text-decoration: underline !important;
       color: black !important;
     }
-    
+
     /* Ensure borders print clearly in grayscale */
     * {
       border-color: #d1d5db !important;
