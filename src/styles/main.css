@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
 
 @theme {
   --color-dark-bg: #0b0f19;
@@ -18,8 +19,95 @@
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Custom Transitions & Animations */
+  --transition-standard: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @source "../../_includes/**/*.njk";
 @source "../**/*.njk";
 @source "../../blog/**/*.md";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    scrollbar-color: var(--color-border-subtle) var(--color-dark-bg);
+    scrollbar-width: thin;
+  }
+
+  body {
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+  }
+
+  /* Focus outline styling */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+
+  /* Selection highlight */
+  ::selection {
+    background-color: var(--color-accent-deep);
+    color: var(--color-text-primary);
+  }
+
+  /* Scrollbar Legacy Fallback */
+  @supports not (scrollbar-color: auto) {
+    html::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    html::-webkit-scrollbar-thumb {
+      background: var(--color-border-subtle);
+      border-radius: 4px;
+    }
+
+    html::-webkit-scrollbar-track {
+      background: var(--color-dark-bg);
+    }
+  }
+
+  /* Print Styles for Resume Page */
+  @media print {
+    body {
+      background: white !important;
+      color: black !important;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+
+    /* Print optimization: layout adjustments */
+    main {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+    }
+    
+    a {
+      text-decoration: underline !important;
+      color: black !important;
+    }
+    
+    /* Ensure borders print clearly in grayscale */
+    * {
+      border-color: #d1d5db !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  }
+}
