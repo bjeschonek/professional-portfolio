@@ -1,0 +1,27 @@
+<header class="sticky top-0 z-50 w-full bg-dark-bg/85 backdrop-blur-md border-b border-border-subtle no-print">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <!-- Brand / Logotype -->
+    <a href="/" class="flex items-center gap-1.5 text-text-primary hover:text-accent-light font-semibold tracking-tight transition-colors duration-200">
+      <span class="font-mono text-accent">&lt;</span>
+      <span>Benjamin Jeschonek</span>
+      <span class="font-mono text-accent">/&gt;</span>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="flex items-center gap-6">
+      {% set isHome = page.url == '/' %}
+      {% set isResume = page.url and ('/resume/' in page.url or page.url == '/resume') %}
+      {% set isBlog = page.url and ('/blog/' in page.url or page.url == '/blog') %}
+
+      <a href="/" class="text-sm font-medium transition-colors duration-200 {% if isHome %}text-accent-light{% else %}text-text-muted hover:text-accent-light{% endif %}">
+        Home
+      </a>
+      <a href="/resume/" class="text-sm font-medium transition-colors duration-200 {% if isResume %}text-accent-light{% else %}text-text-muted hover:text-accent-light{% endif %}">
+        Resume
+      </a>
+      <a href="/blog/" class="text-sm font-medium transition-colors duration-200 {% if isBlog %}text-accent-light{% else %}text-text-muted hover:text-accent-light{% endif %}">
+        Blog
+      </a>
+    </nav>
+  </div>
+</header>
