@@ -11,45 +11,52 @@ This file serves as your system context, operational constraints, and project so
 ## Core Development Protocols
 
 ### Expectation of Highest Quality Work
-* **Software Engineering:** Always follow software engineering best practices.
-* **DO NOT VIBE CODE:** Vibe coding is stricly forbidden.
-* **Best Practices:** Follow DRY, KISS, and SOLID paradigms. Document everything.
+
+- **Software Engineering:** Always follow software engineering best practices.
+- **DO NOT VIBE CODE:** Vibe coding is stricly forbidden.
+- **Best Practices:** Follow DRY, KISS, and SOLID paradigms. Document everything.
 
 ### Code Style & Paradigm
-* **Programming Paradigm:** Favor functional, declarative patterns over imperative loops wherever possible.
-* **State Management:** Keep state immutable and predictable.
-* **Type Safety:** Strict TypeScript enforcement. No implicit any. Use exact interfaces and utility types.
+
+- **Programming Paradigm:** Favor functional, declarative patterns over imperative loops wherever possible.
+- **State Management:** Keep state immutable and predictable.
+- **Type Safety:** Strict TypeScript enforcement. No implicit any. Use exact interfaces and utility types.
 
 ### Performance & Efficiency Targets
-* **Time Complexity:** Strive for $O(1)$ or $O(\log n)$ operations for critical paths. Avoid nested $O(n^2)$ loops.
-* **Memory Management:** Optimize data structures for low memory footprints (e.g., use circular buffers, lookups via HashMaps/Sets instead of array iterations).
-* **Dependencies:** Zero-dependency or low-dependency philosophy. Do not install third-party packages unless absolutely necessary and explicitly approved. Rely on native web APIs or core runtime modules first.
+
+- **Time Complexity:** Strive for $O(1)$ or $O(\log n)$ operations for critical paths. Avoid nested $O(n^2)$ loops.
+- **Memory Management:** Optimize data structures for low memory footprints (e.g., use circular buffers, lookups via HashMaps/Sets instead of array iterations).
+- **Dependencies:** Zero-dependency or low-dependency philosophy. Do not install third-party packages unless absolutely necessary and explicitly approved. Rely on native web APIs or core runtime modules first.
 
 ## Operational Workflow & Guardrails
 
 ### Step-by-Step Execution Protocol
-* **Read and Discover:** Before writing code, locate and read relevant files, schemas, and existing tests. Do not guess exports or API contracts.
-* **Plan (Chain of Thought):** State your proposed architecture changes or bug fix steps in a clear markdown summary before editing code.
-* **Execute:** Make surgical, minimal edits. Do not rewrite whole files if changing a single logic block suffices.
-* **Verify:** Run the test suite immediately after changes. Ensure no regressions occur.
+
+- **Read and Discover:** Before writing code, locate and read relevant files, schemas, and existing tests. Do not guess exports or API contracts.
+- **Plan (Chain of Thought):** State your proposed architecture changes or bug fix steps in a clear markdown summary before editing code.
+- **Execute:** Make surgical, minimal edits. Do not rewrite whole files if changing a single logic block suffices.
+- **Verify:** Run the test suite immediately after changes. Ensure no regressions occur.
 
 ### Absolute Boundaries (The "Never" List)
-* **NEVER** strip out existing inline comments or documentation blocks unless rewriting the feature entirely.
-* **NEVER** placeholders or TODO comments in the code (e.g., // TODO: implement later). Write the complete solution.
-* **NEVER** bypass native platform features in favor of external utility libraries (e.g., no lodash if native JS suffices).
-* **NEVER** alter the testing framework configurations without explicit instruction.
-* **NEVER** make changes to the project without updating all relevant documentation.
+
+- **NEVER** strip out existing inline comments or documentation blocks unless rewriting the feature entirely.
+- **NEVER** placeholders or TODO comments in the code (e.g., // TODO: implement later). Write the complete solution.
+- **NEVER** bypass native platform features in favor of external utility libraries (e.g., no lodash if native JS suffices).
+- **NEVER** alter the testing framework configurations without explicit instruction.
+- **NEVER** make changes to the project without updating all relevant documentation.
 
 ## Testing & Verification
 
 ### Requirements
-* Every bug fix must include a regression test.
-* Every new feature must have corresponding unit or integration tests achieving at least 100% coverage.
-* Ensure all edge cases (e.g., empty states, math boundary limits, null/undefined handling) throw explicit, readable errors.
+
+- Every bug fix must include a regression test.
+- Every new feature must have corresponding unit or integration tests achieving at least 100% coverage.
+- Ensure all edge cases (e.g., empty states, math boundary limits, null/undefined handling) throw explicit, readable errors.
 
 ## Memory & Context Optimization
-* When tracking your progress, maintain an internal state checkpoint.
-* If a solution fails multiple times, halt, re-read the relevant source files, challenge your previous assumptions, and pivot to an alternative approach. Do not loop fruitlessly on the same failing implementation.
+
+- When tracking your progress, maintain an internal state checkpoint.
+- If a solution fails multiple times, halt, re-read the relevant source files, challenge your previous assumptions, and pivot to an alternative approach. Do not loop fruitlessly on the same failing implementation.
 
 ## Details for Agents Using Skills
 
@@ -99,8 +106,8 @@ This ensures OpenCode behaves similarly to Claude Code with full workflow enforc
 
 This repo has two composable layers. They have different jobs and should not be confused:
 
-- **Skills** (`.agents/skills/<name>/SKILL.md`) — workflows with steps and exit criteria. The *how*. Mandatory hops when an intent matches.
-- **Personas** (`agents/<role>.md`) — roles with a perspective and an output format. The *who*.
+- **Skills** (`.agents/skills/<name>/SKILL.md`) — workflows with steps and exit criteria. The _how_. Mandatory hops when an intent matches.
+- **Personas** (`agents/<role>.md`) — roles with a perspective and an output format. The _who_.
 
 Composition rule: **the user (or a slash command) is the orchestrator. Personas do not invoke other personas.** A persona may invoke skills.
 

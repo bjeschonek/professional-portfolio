@@ -9,12 +9,14 @@
     "@types/bun": "latest",
     "@types/node": "^25.9.2",
     "postcss": "^8.5.15",
+    "prettier": "^3.8.4",
     "tailwindcss": "^4.3.0"
   },
   "scripts": {
-    "dev": "bun eleventy --host --port 8080",
+    "dev": "bun eleventy --serve --port 8080",
     "build": "bun eleventy",
-    "lint": "bun x tsc --noEmit"
+    "lint": "bun x tsc --noEmit && bun x prettier --check .",
+    "format": "bun x prettier --write ."
   },
   "peerDependencies": {
     "typescript": "^6.0.3"

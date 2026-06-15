@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #0b0f19;
+  --color-dark-card: #111827;
+  --color-dark-card-hover: #1f2937;
+
+  --color-text-primary: #f3f4f6;
+  --color-text-secondary: #d1d5db;
+  --color-text-muted: #9ca3af;
+
+  --color-accent: #3b82f6;
+  --color-accent-light: #60a5fa;
+  --color-accent-deep: #1e3a8a;
+
+  --color-border-subtle: #1f2937;
+  --color-border-focus: #3b82f6;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+@source "../../_includes/**/*.njk";
+@source "../**/*.njk";
+@source "../../blog/**/*.md";
