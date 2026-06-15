@@ -30,7 +30,7 @@ Building a high-performance, minimalist professional portfolio for a full-stack 
 
 ### Phase 2: Core Content & Data
 
-- [ ] Task 5: Define project and blog data schemas in `_data/`.
+- [x] Task 5: Define project and blog data schemas in `_data/`.
 - [ ] Task 6: Implement Home page template with Biography and Projects grid.
 - [ ] Task 7: Implement Resume page template with high-fidelity layout.
 - [ ] Task 8: Implement Blog listing page template with category filtering.

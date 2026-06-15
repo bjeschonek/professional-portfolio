@@ -89,11 +89,11 @@
 **Description:** Create static JSON data files for projects and blog post categories, along with TypeScript definitions for strict type checking.
 **Acceptance criteria:**
 
-- [ ] `_data/projects.json` exists with real-world sample projects, badges, links, and results
-- [ ] `_data/categories.json` defines categories/tags for blog posts
-- [ ] TypeScript interfaces in `src/types/` define validation contracts for these schemas
+- [x] `_data/projects.json` exists with real-world sample projects, badges, links, and results
+- [x] `_data/categories.json` defines categories/tags for blog posts
+- [x] TypeScript interfaces in `src/types/` define validation contracts for these schemas
       **Verification:**
-- [ ] Verification script or type check validation succeeds.
+- [x] Verification script or type check validation succeeds.
       **Dependencies:** None
       **Files likely touched:**
 - `_data/projects.json`
