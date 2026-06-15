@@ -19,14 +19,14 @@ Building a high-performance, minimalist professional portfolio for a full-stack 
 - [x] Task 1: Write UI/UX design spec and PRD for Stitch (AI design tool).
 - [x] Task 2: Initialize project structure and dependencies (bun, 11ty, Tailwind).
 - [x] Task 3: Configure TypeScript, Prettier, and PostCSS/Tailwind CSS.
-- [ ] Task 4: Create global layouts (base, header, footer) and CSS styles.
+- [x] Task 4: Create global layouts (base, header, footer) and CSS styles.
 
 ### Checkpoint: Foundation
 
 - [x] Stitch PRD/spec is approved
 - [x] 11ty project structure is verified and builds clean
 - [x] Tailwind CSS compiles successfully with brand tokens
-- [ ] Basic base, header, and footer templates render correctly
+- [x] Basic base, header, and footer templates render correctly
 
 ### Phase 2: Core Content & Data
 

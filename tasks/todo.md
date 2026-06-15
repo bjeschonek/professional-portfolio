@@ -59,12 +59,12 @@
 **Description:** Create reusable Nunjucks base layout and header/footer partials. Build the core styling sheet with custom Tailwind CSS properties.
 **Acceptance criteria:**
 
-- [ ] Base layout includes meta tags, favicon link, and references the generated CSS stylesheet
-- [ ] Header Nunjucks partial contains responsive navigation links
-- [ ] Footer Nunjucks partial contains professional and social links
-- [ ] Global stylesheet includes typography scales, gradients, and custom animations matching the design spec
+- [x] Base layout includes meta tags, favicon link, and references the generated CSS stylesheet
+- [x] Header Nunjucks partial contains responsive navigation links
+- [x] Footer Nunjucks partial contains professional and social links
+- [x] Global stylesheet includes typography scales, gradients, and custom animations matching the design spec
       **Verification:**
-- [ ] Manual check: Build and verify header and footer render cleanly.
+- [x] Manual check: Build and verify header and footer render cleanly.
       **Dependencies:** Task 3
       **Files likely touched:**
 - `_includes/layouts/base.njk`
@@ -78,7 +78,7 @@
 - [x] Stitch PRD/spec is approved
 - [x] 11ty project structure is verified and builds clean
 - [x] Tailwind CSS compiles successfully with brand tokens
-- [ ] Basic base, header, and footer templates render correctly
+- [x] Basic base, header, and footer templates render correctly
 
 ---
 
