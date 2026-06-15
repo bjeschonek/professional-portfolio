@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "bun eleventy --serve --port 8080",
     "build": "bun eleventy",
-    "lint": "bun x tsc --noEmit && bun x prettier --check .",
+    "lint": "bun run scripts/validate-data.ts && bun x tsc --noEmit && bun x prettier --check .",
     "format": "bun x prettier --write ."
   },
   "peerDependencies": {
