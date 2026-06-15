@@ -1,0 +1,22 @@
+[
+  {
+    "id": "web-performance",
+    "name": "Web Performance",
+    "description": "Techniques, case studies, and modern standards for building high-speed, lightweight web applications."
+  },
+  {
+    "id": "software-architecture",
+    "name": "Software Architecture",
+    "description": "Explorations of clean code, design patterns, robust system boundaries, and scalable software systems."
+  },
+  {
+    "id": "developer-experience",
+    "name": "Developer Experience",
+    "description": "Optimizing tooling, workflow automation, configuration best practices, and runtime environments."
+  },
+  {
+    "id": "full-stack",
+    "name": "Full-Stack Engineering",
+    "description": "Practical guides and architectural breakdowns across frontend, backend, and API integrations."
+  }
+]

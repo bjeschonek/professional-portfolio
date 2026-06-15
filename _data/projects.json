@@ -1,0 +1,49 @@
+[
+  {
+    "id": "sentinel-ci",
+    "title": "Sentinel CI",
+    "description": "An intelligent, parallelized test runner and CI pipeline optimizer that analyzes git history and dependency graphs to run only affected tests.",
+    "results": [
+      "Reduced average CI test execution time by 68% (from 22 minutes to under 7 minutes).",
+      "Saved over $12,000/month in compute credits by caching dependency layers and parallelizing containerized test runners.",
+      "Achieved 99.8% accuracy in identifying changed modules and downstream dependencies via custom AST parsing."
+    ],
+    "techStack": ["TypeScript", "Node.js", "Docker", "Git", "Rust"],
+    "links": {
+      "github": "https://github.com/example/sentinel-ci",
+      "live": "https://sentinel-ci.example.com"
+    },
+    "featured": true
+  },
+  {
+    "id": "aura-css",
+    "title": "Aura CSS Compiler",
+    "description": "A zero-runtime, compile-time CSS extraction tool for modern component frameworks that outputs optimized vanilla CSS.",
+    "results": [
+      "Decreased frontend JS bundle size by 32% across production micro-frontends by eliminating runtime CSS injections.",
+      "Improved Core Web Vitals, reducing Interaction to Next Paint (INP) by 45ms and Largest Contentful Paint (LCP) by 250ms.",
+      "Integrated a custom static analysis parser that detects and purges 100% of unused utility declarations at build time."
+    ],
+    "techStack": ["Rust", "SWC", "PostCSS", "Tailwind CSS", "Vite"],
+    "links": {
+      "github": "https://github.com/example/aura-css"
+    },
+    "featured": true
+  },
+  {
+    "id": "chronos-crdt",
+    "title": "Chronos Collaborative Canvas",
+    "description": "A real-time whiteboard application leveraging Conflict-free Replicated Data Types (CRDTs) and WebSockets for peer-to-peer data sync.",
+    "results": [
+      "Achieved sub-30ms local state update latency and robust conflict resolution for up to 100 concurrent editors per workspace.",
+      "Designed a custom delta-compression protocol that minimized WebSocket packet payload size by 75%.",
+      "Implemented a secure local-first offline fallback using IndexedDB, enabling seamless reconnection and automated reconciliation."
+    ],
+    "techStack": ["TypeScript", "React", "WebSockets", "IndexedDB", "Node.js"],
+    "links": {
+      "github": "https://github.com/example/chronos-crdt",
+      "live": "https://chronos-canvas.example.com"
+    },
+    "featured": false
+  }
+]
