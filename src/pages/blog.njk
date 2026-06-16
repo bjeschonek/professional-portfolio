@@ -1,0 +1,115 @@
+---
+layout: base.njk
+title: "Blog | Brad Jeschonek"
+permalink: /blog/
+---
+
+<div class="max-w-4xl mx-auto py-8">
+  <!-- Header Section -->
+  <header class="mb-12 text-center sm:text-left">
+    <h1 class="text-4xl font-extrabold text-text-primary tracking-tight mb-4 sm:text-5xl">
+      Blog
+    </h1>
+    <p class="text-lg text-text-secondary max-w-2xl leading-relaxed">
+      Deep dives into web performance, software architecture, developer experience, and full-stack engineering.
+    </p>
+  </header>
+
+  <!-- Filter & Search Controls -->
+  <div class="flex flex-col gap-6 mb-10 pb-8 border-b border-border-subtle">
+    <!-- Category Badges -->
+    <div>
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-text-muted mb-3">
+        Filter by Category
+      </h2>
+      <div class="flex flex-wrap gap-2.5" id="category-filters">
+        <button
+          data-filter="all"
+          class="active px-4 py-1.5 rounded-full text-xs font-semibold bg-accent-deep text-accent-light border border-accent/30 hover:border-accent-light transition-all duration-200 cursor-pointer"
+        >
+          All Posts
+        </button>
+        {% for category in categories %}
+          <button
+            data-filter="{{ category.id }}"
+            class="px-4 py-1.5 rounded-full text-xs font-semibold bg-dark-card text-text-muted border border-border-subtle hover:text-text-primary hover:border-accent-light transition-all duration-200 cursor-pointer"
+          >
+            {{ category.name }}
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Cards Grid -->
+  {% if collections.posts and collections.posts.length > 0 %}
+    <div class="grid gap-6 md:grid-cols-2" id="blog-grid">
+      {% for post in collections.posts %}
+        {% include "components/blog-card.njk" %}
+      {% endfor %}
+    </div>
+    
+    <!-- Empty State -->
+    <div id="no-posts-message" class="hidden text-center py-16 bg-dark-card border border-border-subtle rounded-lg">
+      <div class="text-4xl mb-4">🔍</div>
+      <h3 class="text-lg font-semibold text-text-primary mb-1">No posts found</h3>
+      <p class="text-text-muted text-sm">No articles match the selected category.</p>
+    </div>
+  {% else %}
+    <div class="text-center py-16 bg-dark-card border border-border-subtle rounded-lg">
+      <div class="text-4xl mb-4">✍️</div>
+      <h3 class="text-lg font-semibold text-text-primary mb-1">No posts yet</h3>
+      <p class="text-text-muted text-sm">Check back later for new articles and insights!</p>
+    </div>
+  {% endif %}
+</div>
+
+<!-- Dynamic Client-Side Filtering Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('#category-filters button');
+    const blogCards = document.querySelectorAll('[data-blog-card]');
+    const blogGrid = document.getElementById('blog-grid');
+    const noPostsMessage = document.getElementById('no-posts-message');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filterVal = button.getAttribute('data-filter');
+        
+        // Update active class styles for buttons
+        filterButtons.forEach(btn => {
+          btn.classList.remove('active', 'bg-accent-deep', 'text-accent-light', 'border-accent/30');
+          btn.classList.add('bg-dark-card', 'text-text-muted', 'border-border-subtle');
+        });
+        
+        button.classList.add('active', 'bg-accent-deep', 'text-accent-light', 'border-accent/30');
+        button.classList.remove('bg-dark-card', 'text-text-muted', 'border-border-subtle');
+
+        let visibleCount = 0;
+
+        // Filter cards
+        blogCards.forEach(card => {
+          const cardCategories = card.getAttribute('data-categories').split(/\s+/).filter(Boolean);
+          
+          if (filterVal === 'all' || cardCategories.includes(filterVal)) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Toggle empty state
+        if (noPostsMessage) {
+          if (visibleCount === 0) {
+            noPostsMessage.classList.remove('hidden');
+            if (blogGrid) blogGrid.classList.add('hidden');
+          } else {
+            noPostsMessage.classList.add('hidden');
+            if (blogGrid) blogGrid.classList.remove('hidden');
+          }
+        }
+      });
+    });
+  });
+</script>

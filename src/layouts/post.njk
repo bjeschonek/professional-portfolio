@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+<article class="prose max-w-3xl mx-auto py-8">
+  <header class="mb-8 border-b border-border-subtle pb-6">
+    <h1 class="text-4xl font-extrabold text-text-primary mb-3">{{ title }}</h1>
+    <div class="text-text-muted text-sm flex items-center gap-3 font-mono">
+      <time datetime="{{ date.toISOString() if date else '' }}">
+        {% if date %}
+          {{ date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
+        {% endif %}
+      </time>
+      <span class="text-border-subtle">•</span>
+      <span>{{ readTime | default("3 min read") }}</span>
+    </div>
+  </header>
+  <div class="text-text-secondary leading-relaxed space-y-6">
+    {{ content | safe }}
+  </div>
+</article>
