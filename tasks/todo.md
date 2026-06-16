@@ -122,11 +122,11 @@
 **Description:** Create a high-fidelity, professional resume page styled using the layout defined in the Stitch PRD/spec.
 **Acceptance criteria:**
 
-- [ ] Resume details (Experience, Skills, Education) are cleanly structured and readable
-- [ ] Page is fully mobile-responsive and print-friendly
-- [ ] A download link for a PDF resume is present
+- [x] Resume details (Experience, Skills, Education) are cleanly structured and readable
+- [x] Page is fully mobile-responsive and print-friendly
+- [x] A download link for a PDF resume is present
       **Verification:**
-- [ ] Manual check: Verify responsive columns on desktop vs mobile. Inspect print preview.
+- [x] Manual check: Verify responsive columns on desktop vs mobile. Inspect print preview.
       **Dependencies:** Task 4
       **Files likely touched:**
 - `src/pages/resume.njk`
