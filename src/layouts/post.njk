@@ -1,0 +1,41 @@
+---
+layout: base.njk
+---
+
+<article class="max-w-[760px] mx-auto py-4">
+  <!-- Post Header -->
+  <header class="mb-10 pb-8 border-b border-border-subtle">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight mb-4 leading-tight">
+      {{ title }}
+    </h1>
+
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-text-muted font-mono mb-4">
+      {% if date %}
+        <time datetime="{{ date | dateToISO }}">{{ date | readableDate }}</time>
+      {% endif %}
+
+      {% if readTime %}
+        <span class="text-text-muted/50">•</span>
+        <span>{{ readTime }}</span>
+      {% endif %}
+
+      {% if category %}
+        <span class="text-text-muted/50">•</span>
+        <span class="px-2.5 py-0.5 rounded-full bg-accent-deep text-accent-light text-xs font-semibold tracking-wide uppercase">
+          {{ category }}
+        </span>
+      {% endif %}
+    </div>
+
+    {% if description %}
+      <p class="text-lg text-text-secondary leading-relaxed font-normal italic mt-4">
+        {{ description }}
+      </p>
+    {% endif %}
+  </header>
+
+  <!-- Post Content -->
+  <div class="blog-content">
+    {{ content | safe }}
+  </div>
+</article>
