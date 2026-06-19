@@ -102,3 +102,4 @@ import { Project } from "@types/data";
 ```
 
 This simple configuration keeps imports clean and refactoring painless. Investing in your TypeScript setup pays compounding dividends across the lifecycle of your application.
+

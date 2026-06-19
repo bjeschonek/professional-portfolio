@@ -137,10 +137,10 @@
 **Description:** Create the blog list template that lists posts chronologically and displays clickable categories.
 **Acceptance criteria:**
 
-- [ ] Blog posts are listed with title, publish date, read time, and category tags
-- [ ] Clickable category badges filter posts dynamically or route correctly
+- [x] Blog posts are listed with title, publish date, read time, and category tags
+- [x] Clickable category badges filter posts dynamically or route correctly
       **Verification:**
-- [ ] Manual check: Verify template parses data feed correctly and lists posts.
+- [x] Manual check: Verify template parses data feed correctly and lists posts.
       **Dependencies:** Task 4, Task 5
       **Files likely touched:**
 - `src/pages/blog.njk`

@@ -1,0 +1,42 @@
+<article class="flex flex-col bg-dark-card border border-border-subtle rounded-lg p-6 hover:border-accent hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5 transition-all duration-200" data-blog-card data-categories="{{ post.data.category | default('') }}">
+  <!-- Date and Read Time -->
+  <div class="flex items-center gap-3 text-xs text-text-muted mb-3 font-mono">
+    <time datetime="{{ post.date.toISOString() if post.date else '' }}">
+      {% if post.date %}
+        {{ post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
+      {% else %}
+        Draft
+      {% endif %}
+    </time>
+    <span class="text-border-subtle">•</span>
+    <span>{{ post.data.readTime | default("3 min read") }}</span>
+  </div>
+
+  <!-- Title -->
+  <h3 class="text-xl font-bold text-text-primary hover:text-accent-light transition-colors duration-200 mb-2">
+    <a href="{{ post.url }}">
+      {{ post.data.title }}
+    </a>
+  </h3>
+
+  <!-- Description -->
+  <p class="text-text-secondary text-sm leading-relaxed mb-6 flex-grow">
+    {{ post.data.description }}
+  </p>
+
+  <!-- Category Badge -->
+  <div class="flex flex-wrap gap-2 mt-auto">
+    {% if post.data.category %}
+      {% set catId = post.data.category %}
+      {% set cat = null %}
+      {% for c in categories %}
+        {% if c.id == catId %}
+          {% set cat = c %}
+        {% endif %}
+      {% endfor %}
+      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-accent-deep/50 text-accent-light border border-accent/20">
+        {{ cat.name if cat else catId }}
+      </span>
+    {% endif %}
+  </div>
+</article>
