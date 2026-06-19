@@ -198,10 +198,10 @@
 **Description:** Design and build the Contact section with a clear call to action, contact form or mailto link, and professional social link list.
 **Acceptance criteria:**
 
-- [ ] Contact details are clean and visually prominent
-- [ ] Social links open in new tabs with appropriate security attributes (`rel="noopener noreferrer"`)
+- [x] Contact details are clean and visually prominent
+- [x] Social links open in new tabs with appropriate security attributes (`rel="noopener noreferrer"`)
       **Verification:**
-- [ ] Manual check: Verify links function as expected on mobile and desktop.
+- [x] Manual check: Verify links function as expected on mobile and desktop.
       **Dependencies:** Task 4
       **Files likely touched:**
 - `_includes/components/contact.njk`
