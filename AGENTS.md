@@ -4,10 +4,6 @@ This file provides guidance to AI coding agents when working in this repository.
 
 This file serves as your system context, operational constraints, and project source-of-truth. Review this file before analyzing or modifying the codebase.
 
-## Context Window Token Limit
-
-**STOP** working on a task if the context window exceeds 120,000 tokens. Agent accuracy degrades sharply at this point. If you are working on a task when the context window reaches this limit, handoff the task to a new agent with a new context window.
-
 ## Core Development Protocols
 
 ### Expectation of Highest Quality Work
@@ -36,6 +32,15 @@ This file serves as your system context, operational constraints, and project so
 - **Plan (Chain of Thought):** State your proposed architecture changes or bug fix steps in a clear markdown summary before editing code.
 - **Execute:** Make surgical, minimal edits. Do not rewrite whole files if changing a single logic block suffices.
 - **Verify:** Run the test suite immediately after changes. Ensure no regressions occur.
+
+### Context Window Token Limit
+
+**STOP** working on a task if the context window exceeds 120,000 tokens. Agent accuracy degrades sharply at this point. If you are working on a task when the context window reaches this limit, hand off the task to a new agent with a new context window.
+
+### Multi Agent Workflow
+- If multiple tasks can be completed simultaneously, use sub-agents to complete the work. 
+- Do not use multiple agents for overlapping tasks.
+- Create worktrees for each sub-agent within the .worktrees/ directory.
 
 ### Absolute Boundaries (The "Never" List)
 
