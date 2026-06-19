@@ -110,5 +110,45 @@
       box-shadow: none !important;
       text-shadow: none !important;
     }
+
+    /* Force two-column layout on print */
+    .print-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 2rem !important;
+    }
+    .print-col-main {
+      grid-column: span 2 / span 2 !important;
+      order: 1 !important;
+    }
+    .print-col-sidebar {
+      grid-column: span 1 / span 1 !important;
+      order: 2 !important;
+      border-left: 1px solid #d1d5db !important;
+      padding-left: 2rem !important;
+    }
+    .print-skill-tag {
+      background: transparent !important;
+      color: black !important;
+      border: 1px solid #9ca3af !important;
+    }
   }
+}
+
+/* Custom Component Styles */
+.skill-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem; /* text-xs */
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--color-dark-card-hover);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-secondary);
+  transition: var(--transition-standard);
+  display: inline-block;
+}
+
+.skill-tag:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent-light);
 }
