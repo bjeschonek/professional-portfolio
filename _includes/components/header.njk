@@ -9,9 +9,10 @@
 
     <!-- Navigation Links -->
     <nav class="flex items-center gap-6">
-      {% set isHome = page.url == '/' %}
-      {% set isResume = page.url and ('/resume/' in page.url or page.url == '/resume') %}
-      {% set isBlog = page.url and ('/blog/' in page.url or page.url == '/blog') %}
+      {% set here = page.url | normalize_path %}
+      {% set isHome = here == '/' %}
+      {% set isResume = here == '/resume' %}
+      {% set isBlog = here == '/blog' or '/blog/' in here %}
 
       <a href="/" class="text-sm font-medium transition-colors duration-200 {% if isHome %}text-accent-light{% else %}text-text-muted hover:text-accent-light{% endif %}">
         Home

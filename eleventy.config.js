@@ -1,10 +1,29 @@
 import postcss from "postcss";
 import tailwindcss from "@tailwindcss/postcss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import markdownIt from "markdown-it";
 
 export default function (eleventyConfig) {
   // Add syntax highlighting plugin
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Configure markdown-it with html: false for security
+  const mdLib = markdownIt({
+    html: false,
+    linkify: true,
+    typographer: true,
+  });
+  eleventyConfig.setLibrary("md", mdLib);
+
+  // Normalize paths for navigation active states and canonical URLs
+  eleventyConfig.addFilter("normalize_path", (url) => {
+    if (!url || typeof url !== "string") return "/";
+    let p = url.split("?")[0].split("#")[0] || "/";
+    if (p.endsWith("/index.html")) p = p.slice(0, -"/index.html".length) || "/";
+    else if (p.endsWith(".html")) p = p.slice(0, -".html".length) || "/";
+    if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+    return p || "/";
+  });
 
   // Add date formatting filters
   eleventyConfig.addFilter("readableDate", (dateObj) => {
