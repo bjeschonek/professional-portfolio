@@ -42,3 +42,6 @@ references/
 # Worktrees
 .worktrees/
 
+# Compiled assets
+assets/js/
+

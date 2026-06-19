@@ -44,7 +44,7 @@ Building a high-performance, minimalist professional portfolio for a full-stack 
 
 ### Phase 3: Interactive & Polish
 
-- [ ] Task 10: Implement client-side search (TypeScript) for blog posts.
+- [x] Task 10: Implement client-side search (TypeScript) for blog posts.
 - [ ] Task 11: Implement Contact section and social links.
 - [ ] Task 12: Add simple, performant analytics (lightweight TS/JS script).
 - [ ] Task 13: Final polish (mobile responsiveness, accessibility audit, performance check).

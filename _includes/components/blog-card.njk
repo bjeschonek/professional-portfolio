@@ -1,4 +1,4 @@
-<article class="flex flex-col bg-dark-card border border-border-subtle rounded-lg p-6 hover:border-accent hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5 transition-all duration-200" data-blog-card data-categories="{{ post.data.category | default('') }}">
+<article class="flex flex-col bg-dark-card border border-border-subtle rounded-lg p-6 hover:border-accent hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5 transition-all duration-200" data-blog-card data-post-url="{{ post.url }}" data-categories="{{ post.data.category | default('') }}">
   <!-- Date and Read Time -->
   <div class="flex items-center gap-3 text-xs text-text-muted mb-3 font-mono">
     <time datetime="{{ post.date | dateToISO }}">

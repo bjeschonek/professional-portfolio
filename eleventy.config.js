@@ -2,6 +2,7 @@ import postcss from "postcss";
 import tailwindcss from "@tailwindcss/postcss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownIt from "markdown-it";
+import { execSync } from "child_process";
 
 export default function (eleventyConfig) {
   // Add syntax highlighting plugin
@@ -65,6 +66,35 @@ export default function (eleventyConfig) {
 
   // Watch target for the main CSS file
   eleventyConfig.addWatchTarget("src/styles/main.css");
+
+  // Watch target for search scripts
+  eleventyConfig.addWatchTarget("src/scripts/");
+  eleventyConfig.watchIgnores.add("assets/js/**");
+
+  // Build client-side scripts before Eleventy compilation
+  eleventyConfig.on("eleventy.before", async () => {
+    console.log("Bundling client-side scripts with Bun...");
+    try {
+      const minifyFlag = process.env.NODE_ENV === "production" ? " --minify" : "";
+      execSync(`bun build src/scripts/search.ts --outfile assets/js/search.js${minifyFlag}`, {
+        stdio: "inherit",
+      });
+      console.log("Bun build succeeded.");
+    } catch (err) {
+      console.error("Error during Bun build:", err);
+    }
+  });
+
+  // Post-build indexing with Pagefind
+  eleventyConfig.on("eleventy.after", async () => {
+    console.log("Running Pagefind indexer...");
+    try {
+      execSync("bunx pagefind --site _site", { stdio: "inherit" });
+      console.log("Pagefind indexing succeeded.");
+    } catch (err) {
+      console.error("Error running Pagefind:", err);
+    }
+  });
 
   // Ignore system markdown files and documentation
   eleventyConfig.ignores.add("README.md");

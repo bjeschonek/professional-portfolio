@@ -179,15 +179,18 @@
 **Description:** Implement a lightweight, client-side search component in TypeScript that filters blog posts instantly based on title, content, or tags.
 **Acceptance criteria:**
 
-- [ ] Input element dynamically filters list items without full page reload
-- [ ] Empty/No-results states are gracefully handled
-- [ ] Compiled JavaScript is minimal, performant, and does not block page load
+- [x] Input element dynamically filters list items without full page reload
+- [x] Empty/No-results states are gracefully handled
+- [x] Compiled JavaScript is minimal, performant, and does not block page load
       **Verification:**
-- [ ] Test search performance and filtering accuracy across multiple terms.
+- [x] Test search performance and filtering accuracy across multiple terms.
       **Dependencies:** Task 8
       **Files likely touched:**
 - `src/scripts/search.ts`
 - `src/pages/blog.njk`
+- `eleventy.config.js`
+- `src/layouts/post.njk`
+- `_includes/components/blog-card.njk`
   **Estimated scope:** Medium: 3-5 files
 
 ### Task 11: Implement Contact section and social links
