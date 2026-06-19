@@ -213,10 +213,10 @@
 **Description:** Integrate a privacy-focused, lightweight analytics tracker script without affecting performance score.
 **Acceptance criteria:**
 
-- [ ] Analytics tracking works asynchronously and does not impact page performance scores
-- [ ] Respects user preferences (Do Not Track check)
+- [x] Analytics tracking works asynchronously and does not impact page performance scores
+- [x] Respects user preferences (Do Not Track check)
       **Verification:**
-- [ ] Performance audit passes. Page load telemetry is checked.
+- [x] Performance audit passes. Page load telemetry is checked.
       **Dependencies:** Task 4
       **Files likely touched:**
 - `src/scripts/analytics.ts`

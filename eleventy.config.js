@@ -79,6 +79,9 @@ export default function (eleventyConfig) {
       execSync(`bun build src/scripts/search.ts --outfile assets/js/search.js${minifyFlag}`, {
         stdio: "inherit",
       });
+      execSync(`bun build src/scripts/analytics.ts --outfile assets/js/analytics.js${minifyFlag}`, {
+        stdio: "inherit",
+      });
       console.log("Bun build succeeded.");
     } catch (err) {
       console.error("Error during Bun build:", err);

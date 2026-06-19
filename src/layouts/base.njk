@@ -17,6 +17,11 @@
 
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="/assets/styles/main.css">
+
+    {% if site.analytics.websiteId %}
+    <!-- Analytics (Privacy-focused, lightweight, respecting DNT/GPC) -->
+    <script src="/assets/js/analytics.js" defer data-src="{{ site.analytics.src }}" data-website-id="{{ site.analytics.websiteId }}"></script>
+    {% endif %}
   </head>
   <body class="flex flex-col min-h-screen bg-dark-bg text-text-primary font-sans antialiased">
     <!-- Header -->
