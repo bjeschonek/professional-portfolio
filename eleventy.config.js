@@ -1,7 +1,33 @@
 import postcss from "postcss";
 import tailwindcss from "@tailwindcss/postcss";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default function (eleventyConfig) {
+  // Add syntax highlighting plugin
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Add date formatting filters
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    if (!dateObj) return "";
+    const date = typeof dateObj === "string" ? new Date(dateObj) : dateObj;
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "UTC",
+    });
+  });
+
+  eleventyConfig.addFilter("dateToISO", (dateObj) => {
+    if (!dateObj) return "";
+    try {
+      const date = typeof dateObj === "string" ? new Date(dateObj) : dateObj;
+      return date.toISOString().split("T")[0];
+    } catch (e) {
+      return dateObj;
+    }
+  });
+
   // Tell Eleventy to process CSS files
   eleventyConfig.addTemplateFormats("css");
 
@@ -38,6 +64,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
 
   return {
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
     dir: {
       input: ".",
       includes: "_includes",
