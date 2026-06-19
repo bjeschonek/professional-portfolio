@@ -106,9 +106,9 @@
 **Description:** Build the main landing page containing a compelling biography and the responsive projects showcase grid, styled matching the Stitch PRD/spec.
 **Acceptance criteria:**
 
-- [ ] Biography section renders clearly with optimized typography
-- [ ] Projects are displayed in a responsive grid layout
-- [ ] Each project card displays descriptive content, results, and tech stack badges
+- [x] Biography section renders clearly with optimized typography
+- [x] Projects are displayed in a responsive grid layout
+- [x] Each project card displays descriptive content, results, and tech stack badges
       **Verification:**
 - [ ] Manual check: Verify layout responsiveness and badges on mobile and desktop viewports.
       **Dependencies:** Task 4, Task 5

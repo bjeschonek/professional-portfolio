@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: Brad Jeschonek | Full-Stack Software Engineer
+description: Professional portfolio of Brad Jeschonek, full-stack software engineer specializing in developer tools, compilers, and collaborative systems.
+permalink: /
+---
+
+<div class="space-y-16">
+  <!-- Biography Section -->
+  <section class="max-w-[800px] py-8 md:py-12" aria-labelledby="bio-heading">
+    <h1 id="bio-heading" class="text-4xl md:text-5xl font-bold text-text-primary tracking-tight leading-tight mb-6">
+      Building high-performance systems and developer-centric tools.
+    </h1>
+    <div class="text-lg text-text-secondary leading-relaxed space-y-4">
+      <p>
+        I'm <strong class="text-text-primary font-semibold">Brad Jeschonek</strong>, a full-stack software engineer focused on speed, efficiency, and engineering excellence. I specialize in building distributed architectures, compiler tooling, and collaborative platforms that scale.
+      </p>
+      <p>
+        Currently, I design systems that optimize developer workflows, reduce CI/CD overhead, and enable real-time collaboration. I believe in clean code, zero-overhead abstractions, and solving hard problems from first principles.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section -->
+  <section aria-labelledby="projects-heading" class="border-t border-border-subtle pt-12">
+    <div class="mb-8">
+      <h2 id="projects-heading" class="text-2xl font-bold text-text-primary tracking-tight">
+        Featured Projects
+      </h2>
+      <p class="text-sm text-text-muted mt-2">
+        A curated selection of work in static analysis, compiler tools, and peer-to-peer data synchronization.
+      </p>
+    </div>
+
+    <!-- Responsive Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for project in projects %}
+        {% include "components/project-card.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+</div>
