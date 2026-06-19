@@ -38,7 +38,8 @@ This file serves as your system context, operational constraints, and project so
 **STOP** working on a task if the context window exceeds 120,000 tokens. Agent accuracy degrades sharply at this point. If you are working on a task when the context window reaches this limit, hand off the task to a new agent with a new context window.
 
 ### Multi Agent Workflow
-- If multiple tasks can be completed simultaneously, use sub-agents to complete the work. 
+
+- If multiple tasks can be completed simultaneously, use sub-agents to complete the work.
 - Do not use multiple agents for overlapping tasks.
 - Create worktrees for each sub-agent within the .worktrees/ directory.
 

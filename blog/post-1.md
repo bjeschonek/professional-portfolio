@@ -81,4 +81,3 @@ Additionally, you can use the CSS `content-visibility` property to defer renderi
 ```
 
 By adopting these modern performance techniques, you can ensure a fast, responsive, and visually stable experience for your users.
-
