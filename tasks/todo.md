@@ -110,7 +110,7 @@
 - [x] Projects are displayed in a responsive grid layout
 - [x] Each project card displays descriptive content, results, and tech stack badges
       **Verification:**
-- [ ] Manual check: Verify layout responsiveness and badges on mobile and desktop viewports.
+- [x] Manual check: Verify layout responsiveness and badges on mobile and desktop viewports.
       **Dependencies:** Task 4, Task 5
       **Files likely touched:**
 - `src/pages/index.njk`
@@ -152,11 +152,11 @@
 **Description:** Configure Markdown parser (markdown-it) and build the layout template for individual blog posts.
 **Acceptance criteria:**
 
-- [ ] Markdown files inside `blog/` are successfully compiled by Eleventy
-- [ ] Blog layout displays frontmatter (date, title, read time, description) and body text
-- [ ] Code blocks in posts render with syntax highlighting
+- [x] Markdown files inside `blog/` are successfully compiled by Eleventy
+- [x] Blog layout displays frontmatter (date, title, read time, description) and body text
+- [x] Code blocks in posts render with syntax highlighting
       **Verification:**
-- [ ] Manual check: Navigate to `/blog/post-1/` and verify layout, images, and code snippets.
+- [x] Manual check: Navigate to `/blog/post-1/` and verify layout, images, and code snippets.
       **Dependencies:** Task 4, Task 5
       **Files likely touched:**
 - `_includes/layouts/post.njk`
@@ -166,9 +166,9 @@
 
 ## Checkpoint: Core Features
 
-- [ ] End-to-end site routing works
-- [ ] Blog posts render correctly with metadata and styles
-- [ ] Projects grid displays tech stack badges matching the design spec
+- [x] End-to-end site routing works
+- [x] Blog posts render correctly with metadata and styles
+- [x] Projects grid displays tech stack badges matching the design spec
 
 ---
 

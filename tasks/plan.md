@@ -31,16 +31,16 @@ Building a high-performance, minimalist professional portfolio for a full-stack 
 ### Phase 2: Core Content & Data
 
 - [x] Task 5: Define project and blog data schemas in `_data/`.
-- [ ] Task 6: Implement Home page template with Biography and Projects grid.
-- [ ] Task 7: Implement Resume page template with high-fidelity layout.
+- [x] Task 6: Implement Home page template with Biography and Projects grid.
+- [x] Task 7: Implement Resume page template with high-fidelity layout.
 - [x] Task 8: Implement Blog listing page template with category filtering.
-- [ ] Task 9: Implement individual Blog post template rendering from Markdown.
+- [x] Task 9: Implement individual Blog post template rendering from Markdown.
 
 ### Checkpoint: Core Features
 
-- [ ] End-to-end site routing works
-- [ ] Blog posts render correctly with metadata and styles
-- [ ] Projects grid displays tech stack badges matching the design spec
+- [x] End-to-end site routing works
+- [x] Blog posts render correctly with metadata and styles
+- [x] Projects grid displays tech stack badges matching the design spec
 
 ### Phase 3: Interactive & Polish
 
