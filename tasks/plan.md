@@ -46,13 +46,13 @@ Building a high-performance, minimalist professional portfolio for a full-stack 
 
 - [x] Task 10: Implement client-side search (TypeScript) for blog posts.
 - [x] Task 11: Implement Contact section and social links.
-- [ ] Task 12: Add simple, performant analytics (lightweight TS/JS script).
-- [ ] Task 13: Final polish (mobile responsiveness, accessibility audit, performance check).
+- [x] Task 12: Add simple, performant analytics (lightweight TS/JS script).
+- [x] Task 13: Final polish (mobile responsiveness, accessibility audit, performance check).
 
 ### Checkpoint: Complete
 
-- [ ] All acceptance criteria met
-- [ ] Ready for review
+- [x] All acceptance criteria met
+- [x] Ready for review
 
 ## Risks and Mitigations
 

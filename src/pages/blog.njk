@@ -22,9 +22,10 @@ permalink: /blog/
       <h2 class="text-xs font-semibold uppercase tracking-wider text-text-muted mb-3">
         Filter by Category
       </h2>
-      <div class="flex flex-wrap gap-2.5" id="category-filters">
+      <div class="flex flex-wrap gap-2.5" id="category-filters" role="group" aria-label="Filter blog posts by category">
         <button
           data-filter="all"
+          aria-pressed="true"
           class="active px-4 py-1.5 rounded-full text-xs font-semibold bg-accent-deep text-accent-light border border-accent/30 hover:border-accent-light transition-all duration-200 cursor-pointer"
         >
           All Posts
@@ -32,6 +33,7 @@ permalink: /blog/
         {% for category in categories %}
           <button
             data-filter="{{ category.id }}"
+            aria-pressed="false"
             class="px-4 py-1.5 rounded-full text-xs font-semibold bg-dark-card text-text-muted border border-border-subtle hover:text-text-primary hover:border-accent-light transition-all duration-200 cursor-pointer"
           >
             {{ category.name }}
@@ -56,6 +58,9 @@ permalink: /blog/
       </div>
     </div>
   </div>
+
+  <!-- Live region for announcing search/filter results to screen readers -->
+  <div id="search-announcer" class="sr-only" aria-live="polite"></div>
 
   <!-- Blog Cards Grid -->
   {% if collections.posts and collections.posts.length > 0 %}

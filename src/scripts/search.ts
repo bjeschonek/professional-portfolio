@@ -35,6 +35,7 @@ let blogCards: NodeListOf<HTMLElement>;
 let blogGrid: HTMLElement | null = null;
 let noPostsMessage: HTMLElement | null = null;
 let searchInput: HTMLInputElement | null = null;
+let searchAnnouncer: HTMLElement | null = null;
 
 // Normalize URLs to ensure reliable matching (handles slashes, index.html, casing)
 function normalizeUrl(url: string | null): string {
@@ -123,6 +124,26 @@ function updateList() {
       if (blogGrid) blogGrid.classList.remove("hidden");
     }
   }
+
+  // Update announcer text for screen readers
+  if (searchAnnouncer) {
+    let announcement = "";
+    if (visibleCount === 0) {
+      announcement = "No posts found.";
+    } else {
+      announcement = `Showing ${visibleCount} post${visibleCount === 1 ? "" : "s"}.`;
+    }
+
+    const query = searchInput?.value.trim() || "";
+    const activeFilterBtn = document.querySelector("#category-filters button.active");
+    const activeCategory = activeFilterBtn?.textContent?.trim() || "All Posts";
+
+    announcement += ` Filtered by category "${activeCategory}"`;
+    if (query) {
+      announcement += ` and search term "${query}".`;
+    }
+    searchAnnouncer.textContent = announcement;
+  }
 }
 
 // Handle search input changes with a simple debounce
@@ -162,6 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
   blogGrid = document.getElementById("blog-grid");
   noPostsMessage = document.getElementById("no-posts-message");
   searchInput = document.getElementById("search-input") as HTMLInputElement;
+  searchAnnouncer = document.getElementById("search-announcer");
 
   // Category badges click listener
   filterButtons.forEach((button) => {
@@ -169,14 +191,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const filterVal = button.getAttribute("data-filter") || "all";
       currentCategory = filterVal;
 
-      // Update UI active styling
+      // Update UI active styling and ARIA pressed states
       filterButtons.forEach((btn) => {
         btn.classList.remove("active", "bg-accent-deep", "text-accent-light", "border-accent/30");
         btn.classList.add("bg-dark-card", "text-text-muted", "border-border-subtle");
+        btn.setAttribute("aria-pressed", "false");
       });
 
       button.classList.add("active", "bg-accent-deep", "text-accent-light", "border-accent/30");
       button.classList.remove("bg-dark-card", "text-text-muted", "border-border-subtle");
+      button.setAttribute("aria-pressed", "true");
 
       updateList();
     });

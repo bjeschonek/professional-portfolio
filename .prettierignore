@@ -3,3 +3,5 @@ _site/
 .git/
 bun.lock
 package-lock.json
+lh.json
+

@@ -51,6 +51,16 @@ export default function (eleventyConfig) {
   // Tell Eleventy to process CSS files
   eleventyConfig.addTemplateFormats("css");
 
+  // Simple, zero-dependency CSS minifier to remove comments and whitespace
+  const minifyCss = (css) => {
+    return css
+      .replace(/\/\*[\s\S]*?\*\//g, "")
+      .replace(/\s+/g, " ")
+      .replace(/\s*([\{\}:;,])\s*/g, "$1")
+      .replace(/;}/g, "}")
+      .trim();
+  };
+
   // Define the processing logic for CSS files
   eleventyConfig.addExtension("css", {
     outputFileExtension: "css",
@@ -59,7 +69,7 @@ export default function (eleventyConfig) {
         const result = await postcss([tailwindcss]).process(inputContent, {
           from: inputPath,
         });
-        return result.css;
+        return minifyCss(result.css);
       };
     },
   });
@@ -75,11 +85,10 @@ export default function (eleventyConfig) {
   eleventyConfig.on("eleventy.before", async () => {
     console.log("Bundling client-side scripts with Bun...");
     try {
-      const minifyFlag = process.env.NODE_ENV === "production" ? " --minify" : "";
-      execSync(`bun build src/scripts/search.ts --outfile assets/js/search.js${minifyFlag}`, {
+      execSync("bun build src/scripts/search.ts --outfile assets/js/search.js --minify", {
         stdio: "inherit",
       });
-      execSync(`bun build src/scripts/analytics.ts --outfile assets/js/analytics.js${minifyFlag}`, {
+      execSync("bun build src/scripts/analytics.ts --outfile assets/js/analytics.js --minify", {
         stdio: "inherit",
       });
       console.log("Bun build succeeded.");

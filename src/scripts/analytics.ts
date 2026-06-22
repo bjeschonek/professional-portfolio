@@ -18,21 +18,29 @@ const isTrackingDisabled = (): boolean => {
   );
 };
 
+// Cache config immediately on load before async/deferred callbacks trigger
+const currentScript = document.currentScript as HTMLScriptElement;
+const cachedConfig = currentScript
+  ? {
+      src: currentScript.getAttribute("data-src"),
+      websiteId: currentScript.getAttribute("data-website-id"),
+      domains: currentScript.getAttribute("data-domains"),
+    }
+  : null;
+
 const initAnalytics = (): void => {
   if (isTrackingDisabled()) {
     console.log("Analytics: Respecting user privacy (Do Not Track/GPC enabled). Tracking skipped.");
     return;
   }
 
-  // Get the current loader script element to read config data attributes
-  const currentScript = document.currentScript as HTMLScriptElement;
-  if (!currentScript) {
-    console.warn("Analytics: Loader script tag not found in DOM.");
+  if (!cachedConfig) {
+    console.warn("Analytics: Loader script config not found. Skipping initialization.");
     return;
   }
 
-  const srcUrl = currentScript.getAttribute("data-src");
-  const websiteId = currentScript.getAttribute("data-website-id");
+  const srcUrl = cachedConfig.src;
+  const websiteId = cachedConfig.websiteId;
 
   if (!srcUrl || !websiteId) {
     console.warn("Analytics: Missing data-src or data-website-id attributes on loader script.");
@@ -47,7 +55,7 @@ const initAnalytics = (): void => {
   trackerScript.setAttribute("data-website-id", websiteId);
 
   // If data-domains attribute is present, forward it to the tracker
-  const domains = currentScript.getAttribute("data-domains");
+  const domains = cachedConfig.domains;
   if (domains) {
     trackerScript.setAttribute("data-domains", domains);
   }

@@ -228,11 +228,11 @@
 **Description:** Run final accessibility audits, optimize assets (images/fonts), check cross-browser mobile responsiveness, and run final build.
 **Acceptance criteria:**
 
-- [ ] Lighthouse or PageSpeed Insights accessibility score of 100
-- [ ] Zero responsiveness layout breakages on mobile screens (down to 320px width)
-- [ ] Performance score of 95+ on all pages
+- [x] Lighthouse or PageSpeed Insights accessibility score of 100
+- [x] Zero responsiveness layout breakages on mobile screens (down to 320px width)
+- [x] Performance score of 95+ on all pages
       **Verification:**
-- [ ] Run build and verify output sizes. Check visual display using browser emulation.
+- [x] Run build and verify output sizes. Check visual display using browser emulation.
       **Dependencies:** All previous tasks
       **Files likely touched:**
 - All template and CSS files
@@ -240,5 +240,5 @@
 
 ## Checkpoint: Complete
 
-- [ ] All acceptance criteria met
-- [ ] Ready for review
+- [x] All acceptance criteria met
+- [x] Ready for review
