@@ -29,11 +29,6 @@ _site/
 *.swp
 *.swo
 
-# Agent specific (Keep only if you want to hide agent logic)
-.agents/
-agents/
-references/
-
 # System files
 .cache/
 *.tmp
@@ -44,4 +39,3 @@ references/
 
 # Compiled assets
 assets/js/
-
