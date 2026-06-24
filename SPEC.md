@@ -1,11 +1,11 @@
-# SPEC: Professional Engineering Portfolio
+# SPEC: Professional Developer Portfolio
 
 ## 1. Objective
 
-Build a high-performance, minimalist professional portfolio for a full-stack software engineer. The goal is to secure mid-to-senior level job offers by showcasing high-level project results, technical depth via blog posts, and a professional, performant presence.
+Build a high-performance and minimalist professional portfolio for a full-stack software developer. The goal is to secure mid-to-senior level job offers by showcasing high-level project results, technical depth via blog posts, and a professional, performant presence.
 
 **Target Audience:** Recruiters and Engineering Managers.
-**Core Brand:** "Full-stack engineer who values simplicity and performance."
+**Core Brand:** "Full-stack developer who values simplicity and performance."
 
 ## 2. Commands & Workflow
 
@@ -19,10 +19,7 @@ Build a high-performance, minimalist professional portfolio for a full-stack sof
 
 ```text
 .
-├── .agents/                      # Agent skills and workflows
-├── agents/                       # Agent personas
 ├── docs/                         # Documentation
-├── references/                   # Reference materials
 ├── .github/workflows/           # GitHub Actions for automated deployment
 ├── assets/                       # Images, icons, and global assets
 ├── blog/                        # Markdown files for blog posts
