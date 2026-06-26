@@ -74,6 +74,7 @@ This document specifies the visual style, typography, layout structures, and int
 ### 2.2 Home Page
 
 #### 2.2.1 Hero Section
+
 - **Desktop Layout:** Two-column split grid (1:2 layout).
   - **Left Column (Profile & Metadata):**
     - Circular Profile Image: Centered, high-quality, with a subtle border in `#1f2937` that changes to accent blue on hover.
@@ -88,6 +89,7 @@ This document specifies the visual style, typography, layout structures, and int
 - **Mobile Layout:** Collapses to a single-column layout, stacking: Profile Image -> Location & Socials -> Name -> Subtitle -> CTAs.
 
 #### 2.2.2 Featured Projects Grid
+
 - **Layout:** Desktop multi-column grid (2-column or 3-column) depending on the number of projects. Collapses to 1 column on mobile.
 - **Cards (Project Card Component):**
   - Background: Card background (`#0b0f19`).
@@ -100,21 +102,25 @@ This document specifies the visual style, typography, layout structures, and int
   - Hover Interaction: Border color transitions to primary blue accent (`#3b82f6`) with a subtle translate-y upward lift.
 
 #### 2.2.3 Languages & Tools
+
 - **Layout:** A clean, horizontal flex-wrap grid displaying developer capabilities.
 - **Content:** Icons for key technologies: React, Next.js, Node.js, TypeScript, JavaScript, Rust, Go, Python, SQL, Docker, Git, Bun, Vite, Tailwind CSS, PostCSS.
 - **Aesthetics:** High-contrast minimal SVG icons, colored matching the technology's theme or using custom grayscale icons that light up with blue accenting on hover. Text labels are positioned below or appear as tooltips.
 
 #### 2.2.4 Short Bio Section
+
 - **Layout:** A centered reading container (max-width `800px`).
 - **Aesthetics:** High readability with paragraph elements in secondary text (`#f3f4f6`) and generous line height (`1.75`). Details the developer's journey, philosophy (e.g. speed, simplicity, zero-overhead abstractions), and career summary.
 
 #### 2.2.5 Most Recent Posts
+
 - **Layout:** A vertical stack or 3-column grid displaying the **3 most recent posts** from the blog.
 - **Cards (Recent Post Card):**
   - Displays title, date (e.g., "June 25, 2026"), read time, category badge, and a brief summary.
   - Clean card structure matching project cards with a subtle blue accent line or text hover color transition.
 
 #### 2.2.6 Contact Section
+
 - **Aesthetics:** Minimalist layout centered or aligned with grid.
 - **Content:** Title "Get in Touch" with a short explanatory paragraph.
 - **Interactive Email Link:** Prominent clickable text or email button pointing to `brad@jeschonek.dev`. Hovering reveals a blue underline transition and shifts color to `#60a5fa`.
@@ -127,7 +133,7 @@ This document specifies the visual style, typography, layout structures, and int
 - **Structure (Flowing top-to-bottom):**
   - **Header Block:** Developer Name, professional title, location metadata, and a "Download PDF" action button (hidden on print).
   - **Summary/Overview:** Short professional bio highlighting years of experience (8+) and core focus areas.
-  - **Work Experience Section:** 
+  - **Work Experience Section:**
     - Chronological timeline starting with the current role.
     - Each entry includes: Role Title, Company Name, Employment Dates (Right-aligned or inline), and bulleted achievements (using standard markdown lists with high contrast text).
     - Timeline styling: A thin vertical connector line (`#1f2937`) running along the left margin of the work experience list, with dot node indicators (`#3b82f6`) marking each position.
@@ -142,6 +148,7 @@ This document specifies the visual style, typography, layout structures, and int
 ### 2.4 Blog Pages
 
 #### 2.4.1 Blog Listing (Archive) Page
+
 - **Header:** Title "Blog" with a short description.
 - **Controls (Filter & Search):**
   - Category tags: Horizontal pills (All, Performance, Systems, DX, etc.). Active state uses vibrant blue background (`#3b82f6`) with white text.
@@ -152,6 +159,7 @@ This document specifies the visual style, typography, layout structures, and int
 - **Empty State:** Shows a clean "No posts found" message with custom icon if filters yield zero matches.
 
 #### 2.4.2 Blog Post Detail Page
+
 - **Layout:** Focused single-column layout centered with `max-width: 760px` for optimal typography line lengths.
 - **Header:** Displays category tag, post date, reading duration estimate, and large h1 heading.
 - **Typography Standards:**

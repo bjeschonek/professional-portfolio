@@ -1,27 +1,69 @@
 ---
 layout: base.njk
 title: Brad Jeschonek | Full-Stack Software Engineer
-description: Professional portfolio of Brad Jeschonek, full-stack software engineer specializing in developer tools, compilers, and collaborative systems.
+description: Professional portfolio of Brad Jeschonek, lead software engineer specializing in developer tools, compilers, and collaborative systems.
 permalink: /
 ---
 
-<div class="space-y-16">
-  <!-- Biography Section -->
-  <section class="max-w-[800px] py-8 md:py-12" aria-labelledby="bio-heading">
-    <h1 id="bio-heading" class="text-4xl md:text-5xl font-bold text-text-primary tracking-tight leading-tight mb-6">
-      Building high-performance systems and developer-centric tools.
-    </h1>
-    <div class="text-lg text-text-secondary leading-relaxed space-y-4">
-      <p>
-        I'm <strong class="text-text-primary font-semibold">Brad Jeschonek</strong>, a full-stack software engineer focused on speed, efficiency, and engineering excellence. I specialize in building distributed architectures, compiler tooling, and collaborative platforms that scale.
-      </p>
-      <p>
-        Currently, I design systems that optimize developer workflows, reduce CI/CD overhead, and enable real-time collaboration. I believe in clean code, zero-overhead abstractions, and solving hard problems from first principles.
-      </p>
+<div class="space-y-20">
+  <!-- Hero Section -->
+  <section class="py-6 md:py-12" aria-labelledby="hero-name">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
+      
+      <!-- Left Column (Profile & Metadata) -->
+      <div class="flex flex-col items-center text-center space-y-4 md:col-span-1">
+        <!-- Profile Image -->
+        <div class="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border border-border-subtle hover:border-accent transition-colors duration-200 shadow-md group">
+          <img src="/images/profile.jpg" alt="Brad Jeschonek" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        
+        <!-- Location Info -->
+        <div class="flex items-center gap-2 text-sm text-text-muted">
+          <svg class="w-4 h-4 text-accent shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"></path>
+          </svg>
+          <span>Reading, PA / Remote</span>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex items-center gap-4">
+          <a href="https://github.com/bjeschonek" target="_blank" rel="noopener noreferrer" class="text-text-muted hover:text-accent transition-all duration-200 transform hover:-translate-y-1 hover:scale-110" aria-label="GitHub">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.197 22 16.44 22 12.017 22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/bjeschonek" target="_blank" rel="noopener noreferrer" class="text-text-muted hover:text-accent transition-all duration-200 transform hover:-translate-y-1 hover:scale-110" aria-label="LinkedIn">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column (Name & Bio) -->
+      <div class="flex flex-col text-center md:text-left space-y-4 md:col-span-2">
+        <h1 id="hero-name" class="text-4xl md:text-5xl font-extrabold text-text-primary tracking-tight leading-tight">
+          Brad Jeschonek
+        </h1>
+        <p class="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl">
+          Building high-performance systems and developer-centric tools. A full-stack engineer who values speed, simplicity, and zero-overhead abstractions.
+        </p>
+        
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+          <a href="#contact" class="px-5 py-2.5 text-sm font-bold text-white bg-accent hover:bg-accent-light rounded-md transition-colors duration-200 shadow-md">
+            Contact Me
+          </a>
+          <a href="#featured-projects" class="px-5 py-2.5 text-sm font-bold text-text-muted hover:text-white bg-transparent border border-border-subtle hover:bg-border-subtle rounded-md transition-colors duration-200">
+            View Featured Projects
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Projects Showcase Section -->
+  <!-- Featured Projects Showcase Section -->
   <section aria-labelledby="projects-heading" class="border-t border-border-subtle pt-12">
     <div class="mb-8">
       <h2 id="projects-heading" class="text-2xl font-bold text-text-primary tracking-tight">
@@ -33,14 +75,235 @@ permalink: /
     </div>
 
     <!-- Responsive Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="featured-projects">
       {% for project in projects %}
         {% include "components/project-card.njk" %}
       {% endfor %}
     </div>
   </section>
 
+  <!-- Languages & Tools Grid Section -->
+  <section aria-labelledby="languages-heading" class="border-t border-border-subtle pt-12">
+    <div class="mb-8">
+      <h2 id="languages-heading" class="text-2xl font-bold text-text-primary tracking-tight">
+        Languages & Tools
+      </h2>
+      <p class="text-sm text-text-muted mt-2">
+        A look at the languages, frameworks, and tools I use to build robust software.
+      </p>
+    </div>
+
+    <!-- Wrap Flex-Grid of Tech SVGs -->
+    <div class="flex flex-wrap gap-4 items-center justify-center md:justify-start">
+      <!-- React -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="React">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#61dafb] transition-colors duration-200" viewBox="-11.5 -10.23174 23 20.46348" fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="0" cy="0" r="2.05" fill="currentColor"/>
+            <g stroke="currentColor">
+              <ellipse rx="11" ry="4.2"/>
+              <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+              <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+            </g>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">React</span>
+      </div>
+
+      <!-- Next.js -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="Next.js">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#ffffff] transition-colors duration-200" viewBox="0 0 180 180" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="90" cy="90" r="85" stroke="currentColor"/>
+            <path d="M135 137.5L82.5 60.5H72.5V119.5H82.5V77L125 137.5H135Z" fill="currentColor" stroke="none"/>
+            <path d="M117.5 60.5V119.5H127.5V60.5H117.5Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">Next.js</span>
+      </div>
+
+      <!-- Node.js -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="Node.js">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#339933] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2c-.22 0-.43.06-.62.18L4.62 6.13c-.38.22-.62.62-.62 1.06v7.62c0 .44.24.84.62 1.06l6.76 3.95c.19.12.4.18.62.18.22 0 .43-.06.62-.18l6.76-3.95c.38-.22.62-.62.62-1.06V7.19c0-.44-.24-.84-.62-1.06L12.62 2.18c-.19-.12-.4-.18-.62-.18zm0 1.95v14.12l-5.83-3.41V7.37L12 3.95zm.83 2.17l5 2.92v2.66l-5-2.92V6.12z" />
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">Node.js</span>
+      </div>
+
+      <!-- TypeScript -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="TypeScript">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#3178c6] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 2H2v20h20V2zM12.5 16.5c0 1.2-.5 2.1-1.5 2.7-.9.6-2.2.8-3.7.8-1.6 0-2.9-.3-3.9-.9-.9-.6-1.5-1.5-1.7-2.7l1.9-1.1c.2.8.5 1.4.9 1.8.5.4 1.1.6 1.9.6.7 0 1.3-.1 1.7-.4.4-.3.6-.7.6-1.2 0-.5-.2-.9-.5-1.1-.4-.3-1-.5-1.9-.8L5.7 13c-.9-.3-1.6-.8-2.1-1.4-.5-.6-.7-1.4-.7-2.4 0-1.1.4-2 1.1-2.7.8-.7 1.8-1.1 3.2-1.1 1.3 0 2.3.3 3.1.8.8.5 1.3 1.2 1.6 2.2l-1.8 1.1c-.2-.6-.4-1-.8-1.3-.4-.3-.9-.4-1.5-.4-.6 0-1 .1-1.4.3-.3.2-.5.5-.5.9 0 .4.2.7.5.9.3.2.8.4 1.6.6l1.6.5c1 .3 1.7.8 2.2 1.4.4.6.6 1.4.6 2.4zm8.2-.1c-.4.5-.9.8-1.5 1-.6.2-1.3.3-2.1.3-.8 0-1.5-.1-2.1-.3-.6-.2-1.1-.5-1.5-1v-6.9h1.7V17c0 .5.1.8.4 1 .3.2.6.3 1 .3s.7-.1 1-.3c.3-.2.4-.5.4-1V9.5h1.7v6.9z"/>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">TypeScript</span>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="JavaScript">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#f7df1e] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M0 0h24v24H0V0zm22 22V2H2v20h20zM10.8 13.7c0 1.9-1 2.8-2.7 2.8-1 0-1.8-.4-2.2-1.1l1.5-1c.3.4.6.6 1 .6.5 0 .8-.3.8-.8v-5.6h1.7v5.1zm5.7-.3c.3.5.7.8 1.2.8.6 0 1-.3 1-.8 0-.5-.4-.7-1.2-1-.9-.4-2.1-.8-2.1-2.3 0-1.3 1-2.2 2.6-2.2 1.1 0 1.9.4 2.3 1.2l-1.4 1c-.3-.4-.6-.6-1-.6-.4 0-.6.2-.6.5 0 .4.4.6 1 .8 1.2.5 2.3.9 2.3 2.4 0 1.5-1.1 2.4-2.8 2.4-1.4 0-2.4-.6-2.9-1.6l1.6-.7z"/>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">JavaScript</span>
+      </div>
+
+      <!-- Rust -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="Rust">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#dea584] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.027 13.425a.417.417 0 0 1 .135-.027c.566 0 .93-.418.93-1s-.364-1-.93-1a.417.417 0 0 1-.135-.027 1.83 1.83 0 0 0-.258-.888c.243-.16.347-.534.204-.849l-1.025-1.776a.434.434 0 0 0-.58-.179c-.198.113-.456.096-.64-.047A1.854 1.854 0 0 0 16 7.151c.026-.254.184-.467.432-.544l1.916-.583c.31-.094.464-.468.324-.766l-.766-1.328c-.14-.24-.43-.332-.697-.247-.193.061-.43-.024-.555-.205a1.86 1.86 0 0 0-1.127-1.127.426.426 0 0 1-.205-.555L15.905.88a.426.426 0 0 0-.697-.247l-.766 1.328c-.14.298-.485.426-.766.324l-1.916-.583A.426.426 0 0 0 11.327.99l.027.135a1.83 1.83 0 0 0-.888.258.417.417 0 0 1-.849-.204L8.74.153a.434.434 0 0 0-.58.179c-.113.198-.096.456-.24.64A1.854 1.854 0 0 0 7.151 2c-.254-.026-.467-.184-.544-.432l-.583-1.916C5.93.342 5.556.188 5.258.328l-1.328.766c-.24.14-.332.43-.247.697.061.193-.024.43-.205.555A1.86 1.86 0 0 0 2.35 3.473a.426.426 0 0 1-.555.205L.88 4.26a.426.426 0 0 0-.247.697l1.328.766c.298.14.426.485.324.766l-.583 1.916c-.094.31-.055.632.188.847l.135-.027a1.83 1.83 0 0 0 .888-.258.417.417 0 0 1 .849.204l1.025 1.776a.434.434 0 0 0 .58.179c.198-.113.456-.096.64.047A1.854 1.854 0 0 0 8 16.849c-.026.254-.184.467-.432.544l-1.916.583c-.31.094-.464.468-.324.766l.766 1.328c.14.24.43.332.697.247.193-.061.43.024.555.205a1.86 1.86 0 0 0 1.127 1.127.426.426 0 0 1 .205.555l.583 1.916c.094.31.417.464.715.324l1.328-.766a.426.426 0 0 0 .247-.697l-1.328-.766c-.298-.14-.426-.485-.324-.766l.583-1.916c.094-.31.055-.632-.188-.847l-.135.027a1.83 1.83 0 0 0-.888.258.417.417 0 0 1-.849-.204l-1.025-1.776A.434.434 0 0 0 10.3 19.3c.113.198.096.456.24.64.428.272.73.67.87 1.15.254-.026.467-.184.544-.432l.583-1.916c.094-.31.332-.464.63-.324l1.328.766a.434.434 0 0 0 .697-.247l.247-.697c-.061-.193.024-.43.205-.555a1.86 1.86 0 0 0 1.127-1.127.426.426 0 0 1 .555-.205l1.916.583a.426.426 0 0 0 .697-.247l.766-1.328a.426.426 0 0 0-.324-.715zM7.667 9.833h3.5c1.1 0 1.667.5 1.667 1.333 0 .667-.333 1.167-.833 1.333L14 15.667h-1.833L10.333 13H9.5v2.667H7.667zm1.833 1.667h1.5a.667.667 0 0 0 0-1.333h-1.5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">Rust</span>
+      </div>
+
+      <!-- Go -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="Go">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#00acd7] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.16 12.89c.12 1.63 1.34 2.82 2.98 2.82 1.25 0 2.22-.65 2.64-1.64h-3.08v-1.75h5.1c.06.33.09.68.09 1.05 0 2.94-1.92 5.09-4.81 5.09-3.03 0-5.11-2.07-5.11-5.26S12.06 8 15.14 8c1.55 0 2.79.58 3.69 1.48l-1.39 1.35c-.56-.54-1.32-.9-2.3-.9-1.68 0-2.85 1.21-2.98 2.96zm11.84.11v4.47h-1.93v-4.14c0-1.12-.51-1.7-1.44-1.7-.91 0-1.57.59-1.57 1.7v4.14h-1.93v-9.35h1.93v1.32c.57-.96 1.43-1.5 2.64-1.5 1.76 0 2.3 1.08 2.3 2.69v5.17zM6.9 12.09c0-1.99-1.07-3.41-2.82-3.41-1.73 0-2.81 1.42-2.81 3.41 0 1.99 1.08 3.41 2.81 3.41 1.75 0 2.82-1.42 2.82-3.41zM1.93 18C.69 16.92 0 14.86 0 12.09S.69 7.26 1.93 6.18C3.12 5.15 4.7 4.69 6.27 4.69c3.08 0 5.48 2.11 5.48 5.25v4.3c0 2.58-1.51 3.86-3.83 3.86-1.54 0-2.73-.61-3.23-1.68-.44.89-1.45 1.68-2.79 1.68V18z"/>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">Go</span>
+      </div>
+
+      <!-- Python -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="Python">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#3776ab] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.97 2c-1.64 0-3.1.11-4.22.42-1.12.31-2 .88-2.31 2C5 6 5 7.68 5 9.32v.63h7v.95H2.63v.63c0 1.64.11 3.1.42 4.22.31 1.12.88 2 2 2.31 1.12.31 2.78.31 4.42.31h.63v-3.5h-.95V13H16.3c1.64 0 3.1-.11 4.22-.42 1.12-.31 2-.88 2.31-2C23 9 23 7.32 23 5.68v-.63h-7v-.95h9.37v-.63c0-1.64-.11-3.1-.42-4.22-.31-1.12-.88-2-2-2.31-1.12-.31-2.78-.31-4.42-.31zM9.47 3.58a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm5 11.84a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"/>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">Python</span>
+      </div>
+
+      <!-- SQL -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="SQL">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#f29111] transition-colors duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">SQL</span>
+      </div>
+
+      <!-- Docker -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="Docker">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#2496ed] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13.983 11.078h2.119v-2H13.98v2zm-2.82 0h2.118v-2h-2.118v2zm-2.82 0H10.46v-2H8.343v2zm-2.82 0h2.118v-2H5.523v2zm-2.82 0h2.118v-2H2.703v2zm11.28-2.82h2.119v-2H13.98v2zm-2.82 0h2.118v-2h-2.118v2zm-2.82 0H10.46v-2H8.343v2zm-2.82 0h2.118v-2H5.523v2zm8.46-2.82h2.119v-2H13.98v2zm-2.82 0h2.118v-2h-2.118v2zm5.64 5.64h2.118v-2h-2.118v2zm2.82 0h2.119v-2H19.62v2zm-5.64-5.64h2.118v-2h-2.118v2zm8.46 5.64h2.119v-2h-2.119v2zm.072-2.106c-.054-.343-.223-.623-.522-.843-.448-.329-1.074-.471-1.85-.471h-.595c.01-.06.015-.12.015-.181v-.645c0-.071.026-.145.064-.207l.388-.344a.434.434 0 0 0-.295-.765h-.52c-.07 0-.142-.027-.206-.065l-.342-.387a.434.434 0 0 0-.766.295v.596c0 .06-.005.12-.015.18-.466.702-.857 1.503-.857 2.476 0 .546-.179.972-.533 1.272a4.436 4.436 0 0 1-2.923.953h-8.08c-.466 0-.857.391-.857.857 0 .466.391.857.857.857H13.6c.973 0 1.774-.391 2.476-.857.3-.354.726-.533 1.272-.533.973 0 1.774.391 2.476.857.3.354.726.533 1.272.533.466 0 .857-.391.857-.857 0-.181-.06-.343-.181-.466a3.834 3.834 0 0 0 .596-.843c.18-.32.223-.623.167-.966z" />
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">Docker</span>
+      </div>
+
+      <!-- Git -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="Git">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#f05032] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.64 10.97L13.03.36a1.64 1.64 0 0 0-2.3 0L7.75 3.34l3.19 3.19a2.76 2.76 0 0 1 3.52 3.52l3.19 3.19a2.76 2.76 0 1 1-1.12 1.12l-3.08-3.08v4.25a2.76 2.76 0 1 1-1.63 0V11.2a2.76 2.76 0 0 1-1.92-2.64c0-.39.08-.76.24-1.1L7.14 4.42.36 11.2a1.64 1.64 0 0 0 0 2.3l10.61 10.61c.64.64 1.67.64 2.3 0l10.37-10.37a1.64 1.64 0 0 0 0-2.27z" />
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">Git</span>
+      </div>
+
+      <!-- Bun -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="Bun">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#fbf0e9] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3c-4.4 0-8 3.6-8 8 0 2.5 1.1 4.7 3 6.2l-.5 1.8c-.1.4.2.7.6.7h9.8c.4 0 .7-.3.6-.7l-.5-1.8c1.9-1.5 3-3.7 3-6.2 0-4.4-3.6-8-8-8zm-2.5 11c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm5 0c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">Bun</span>
+      </div>
+
+      <!-- Vite -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="Vite">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#bd34fe] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.914 1.077a.64.64 0 00-.602-.18L4.69 4.394a.64.64 0 00-.361.961l7.14 10.712a.64.64 0 00.53.287h2.898l-3.565 6.24a.64.64 0 00.826.892l11.458-9.167a.64.64 0 00-.28-1.11l-5.698-.95 3.125-6.25a.64.64 0 00-.399-.832z"/>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">Vite</span>
+      </div>
+
+      <!-- Tailwind CSS -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="Tailwind CSS">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#38bdf8] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.002 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624.78.784 1.761 1.776 4.736 1.776 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z" />
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">Tailwind CSS</span>
+      </div>
+
+      <!-- PostCSS -->
+      <div class="flex flex-col items-center gap-1.5 group cursor-default w-20 py-2" title="PostCSS">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-dark-card border border-border-subtle group-hover:border-accent transition-colors duration-200">
+          <svg class="w-7 h-7 text-text-muted group-hover:text-[#dd3a0a] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.7 13c0-4-3-7-7-7-3.6 0-6.6 2.7-7 6.2l-.7.1c-.6 0-1 .4-1 .9 0 .6.4 1 1 1l.7.1c.4 3.5 3.4 6.2 7 6.2 4 0 7-3 7-7zm-7 5.2c-2.9 0-5.2-2.3-5.2-5.2s2.3-5.2 5.2-5.2 5.2 2.3 5.2 5.2-2.3 5.2-5.2 5.2z"/>
+          </svg>
+        </div>
+        <span class="text-[10px] font-mono text-text-muted group-hover:text-text-primary transition-colors duration-200">PostCSS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Short Bio Philosophy Section -->
+  <section aria-labelledby="about-heading" class="border-t border-border-subtle pt-12 max-w-[800px] mx-auto">
+    <h2 id="about-heading" class="text-2xl font-bold text-text-primary tracking-tight mb-6">
+      Philosophy & Journey
+    </h2>
+    <div class="text-text-secondary space-y-6 leading-[1.75]">
+      <p>
+        I am a builder at heart, driven by the challenge of making things run faster, scale further, and work more reliably. Over the past 8+ years, I've designed and shipped systems ranging from AST-level compiler tools and decentralized state-synchronization engines to high-throughput cloud architectures.
+      </p>
+      <p>
+        My core philosophy centers on <strong class="text-text-primary font-medium">zero-overhead abstractions</strong> and <strong class="text-text-primary font-medium">radical simplicity</strong>. I believe developer tooling should be invisible yet incredibly fast, and that software complexity should only be introduced when there is no other path forward. When I build, I optimize for the end-user experience and developer feedback loops alike.
+      </p>
+      <p>
+        Whether it's building Sentinel CI to shave 15 minutes off every build, implementing local-first collaborative sync inside SyncSpace, or compiling component styles at build time, I tackle bottlenecks from first principles.
+      </p>
+    </div>
+  </section>
+
+  <!-- Most Recent Posts Section -->
+  {% if collections.posts and collections.posts.length > 0 %}
+  <section aria-labelledby="blog-heading" class="border-t border-border-subtle pt-12">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 id="blog-heading" class="text-2xl font-bold text-text-primary tracking-tight">
+          Most Recent Posts
+        </h2>
+        <p class="text-sm text-text-muted mt-2">
+          Deep dives into web performance, compilers, developer experience, and system design.
+        </p>
+      </div>
+      <a href="/blog/" class="text-sm font-semibold text-accent-light hover:text-accent transition-colors duration-200 flex items-center gap-1">
+        <span>All Posts</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+
+    <!-- 3-Column Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% set recent_posts = collections.posts | reverse %}
+      {% for post in recent_posts %}
+        {% if loop.index0 < 3 %}
+          {% include "components/blog-card.njk" %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   <!-- Contact Section -->
   {% include "components/contact.njk" %}
 </div>
-

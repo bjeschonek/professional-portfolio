@@ -193,12 +193,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Update UI active styling and ARIA pressed states
       filterButtons.forEach((btn) => {
-        btn.classList.remove("active", "bg-accent-deep", "text-accent-light", "border-accent/30");
+        btn.classList.remove("active", "bg-accent", "text-white", "border-transparent");
         btn.classList.add("bg-dark-card", "text-text-muted", "border-border-subtle");
         btn.setAttribute("aria-pressed", "false");
       });
 
-      button.classList.add("active", "bg-accent-deep", "text-accent-light", "border-accent/30");
+      button.classList.add("active", "bg-accent", "text-white", "border-transparent");
       button.classList.remove("bg-dark-card", "text-text-muted", "border-border-subtle");
       button.setAttribute("aria-pressed", "true");
 
