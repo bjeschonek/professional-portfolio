@@ -1,7 +1,7 @@
 [
   {
-    "id": "sentinel-ci",
-    "title": "Sentinel CI",
+    "id": "hyprtrdr",
+    "title": "hyprtrdr",
     "description": "An intelligent, parallelized test runner and CI pipeline optimizer that analyzes git history and dependency graphs to run only affected tests.",
     "results": [
       "Reduced average CI test execution time by 68% (from 22 minutes to under 7 minutes).",
@@ -16,8 +16,8 @@
     "featured": true
   },
   {
-    "id": "aura-css",
-    "title": "Aura CSS Compiler",
+    "id": "blog-template",
+    "title": "11ty Blog Template",
     "description": "A zero-runtime, compile-time CSS extraction tool for modern component frameworks that outputs optimized vanilla CSS.",
     "results": [
       "Decreased frontend JS bundle size by 32% across production micro-frontends by eliminating runtime CSS injections.",
@@ -31,8 +31,8 @@
     "featured": true
   },
   {
-    "id": "chronos-crdt",
-    "title": "Chronos Collaborative Canvas",
+    "id": "11ty-guide",
+    "title": "Blog",
     "description": "A real-time whiteboard application leveraging Conflict-free Replicated Data Types (CRDTs) and WebSockets for peer-to-peer data sync.",
     "results": [
       "Achieved sub-30ms local state update latency and robust conflict resolution for up to 100 concurrent editors per workspace.",
