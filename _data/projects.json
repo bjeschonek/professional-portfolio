@@ -1,48 +1,47 @@
 [
   {
     "id": "hyprtrdr",
-    "title": "hyprtrdr",
-    "description": "An intelligent, parallelized test runner and CI pipeline optimizer that analyzes git history and dependency graphs to run only affected tests.",
+    "title": "hyprtrdr.io",
+    "description": "A full-stack web application for day traders featuring live stock scanners with alerts, charts, news feeds, pattern recognition, and performance analysis.",
     "results": [
-      "Reduced average CI test execution time by 68% (from 22 minutes to under 7 minutes).",
-      "Saved over $12,000/month in compute credits by caching dependency layers and parallelizing containerized test runners.",
-      "Achieved 99.8% accuracy in identifying changed modules and downstream dependencies via custom AST parsing."
+      "Launched with 0 subscribers and grew active subscriber base to 217 users in 30 days.",
+      "Reduced build pipeline time from 18 mintues to 7 minutes by developing a multi-agent workflow.",
+      "Improved conversion rate from 0.28% to 0.97% by split testing marketing pages."
     ],
-    "techStack": ["TypeScript", "Node.js", "Docker", "Git", "Rust"],
+    "techStack": ["Go", "Next.js", "TypeScript", "Zustand", "WASM"],
     "links": {
-      "github": "https://github.com/example/sentinel-ci",
-      "live": "https://sentinel-ci.example.com"
+      "live": "https://hyprtrdr.io"
     },
     "featured": true
   },
   {
     "id": "blog-template",
     "title": "11ty Blog Template",
-    "description": "A zero-runtime, compile-time CSS extraction tool for modern component frameworks that outputs optimized vanilla CSS.",
+    "description": "An agent-ready blog template built using Eleventy SSG, Tailwind, and Bun.",
     "results": [
       "Decreased frontend JS bundle size by 32% across production micro-frontends by eliminating runtime CSS injections.",
       "Improved Core Web Vitals, reducing Interaction to Next Paint (INP) by 45ms and Largest Contentful Paint (LCP) by 250ms.",
       "Integrated a custom static analysis parser that detects and purges 100% of unused utility declarations at build time."
     ],
-    "techStack": ["Rust", "SWC", "PostCSS", "Tailwind CSS", "Vite"],
+    "techStack": ["11ty", "Bun", "TypeScript", "Tailwind CSS"],
     "links": {
-      "github": "https://github.com/example/aura-css"
+      "github": "https://github.com/bjeschonek/11ty-blog-template"
     },
     "featured": true
   },
   {
     "id": "11ty-guide",
-    "title": "Blog",
-    "description": "A real-time whiteboard application leveraging Conflict-free Replicated Data Types (CRDTs) and WebSockets for peer-to-peer data sync.",
+    "title": "11ty Blog Tutorial (feat. AI)",
+    "description": "A full docs-style guide and tutorial to building out a blog using 11ty, Bun, and Tailwind. Featuring helpful skills and prompts for agentic assistance.",
     "results": [
       "Achieved sub-30ms local state update latency and robust conflict resolution for up to 100 concurrent editors per workspace.",
       "Designed a custom delta-compression protocol that minimized WebSocket packet payload size by 75%.",
       "Implemented a secure local-first offline fallback using IndexedDB, enabling seamless reconnection and automated reconciliation."
     ],
-    "techStack": ["TypeScript", "React", "WebSockets", "IndexedDB", "Node.js"],
+    "techStack": ["TypeScript", "11ty", "Bun", "Tailwind CSS"],
     "links": {
-      "github": "https://github.com/example/chronos-crdt",
-      "live": "https://chronos-canvas.example.com"
+      "github": "https://github.com/bjeschonek/11ty-guide",
+      "live": "https://blogwitheleventy.dev"
     },
     "featured": false
   }
